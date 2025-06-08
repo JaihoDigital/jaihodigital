@@ -625,13 +625,13 @@
     <section id="divisions" class="section">
         <h2>Our Divisions</h2>
         <div class="divisions-grid">
-            <div class="division-card" onclick="openDivision('jaiho_techserve/index')">
+            <div class="division-card" onclick="openDivision('jaiho_labs/index')">
                 <div class="division-logo labs-logo">JL</div>
                 <!--<div class="division-logo labs-logo">
                     <img src="im.jpeg" alt="Jaiho Labs Logo">
                 </div>-->
                 <h3>Jaiho Labs</h3>
-                <p>Turning AI and tech ideas into real-world products.</p>
+                <p>Where ideas become Intelligent products.</p>
                 <!--<p>Visit <a href="jaiho_techserve/index.html>">Jaiho TechServe</a></p>-->
             </div>
             <div class="division-card" onclick="openDivision('jaiho_techserve/index')">
@@ -878,8 +878,11 @@
 
         // Division click handler
         function openDivision(division) {
-            if (division == 'jaiho_techserve/index'){
-                window.location.href = `${division}.html`;
+            if (division == 'jaiho_labs/index'){
+                window.location.href = `https://jaiho-labs.onrender.com`;
+            }
+            else if (division == 'jaiho_techserve/index'){
+                window.location.href = `https://jaihotechserve.onrender.com`;
             }
             else{
             alert(`${division.charAt(0).toUpperCase() + division.slice(1)} division page coming soon!`);
