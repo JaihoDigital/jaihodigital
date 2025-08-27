@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore More | Jaiho Digital Services & Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500&display=swap');
+      
+      /* CSS Variables for theme colors */
+      :root { 
+        --primary: #001F3F; 
+        --secondary: #00BFFF; 
+        --accent: #6A1B9A; 
+        --text: #4A4A4A; 
+        --soft: #FAFAFA; 
+        --border: #F0F0F0; 
+      }
+      
+      html { 
+        scroll-behavior: smooth; 
+      }
+      
+      .font-head { 
+        font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+      }
+      
+      .font-body { 
+        font-family: 'Roboto', ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; 
+      }
+      
+      /* Glassmorphism effect for the navbar */
+      .glass { 
+        backdrop-filter: blur(10px); 
+        background: rgba(255,255,255,0.8); 
+        transition: all 0.3s ease;
+      }
+      
+      .dark .glass { 
+        background: rgba(0,0,0,0.4); 
+      }
+      
+      .btn-primary { 
+        background: var(--primary); 
+        color:#fff; 
+        transition: all 0.3s ease;
+        transform: translateY(0);
+      }
+      
+      .btn-primary:hover { 
+        filter: brightness(1.1); 
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,31,63,0.3);
+      }
+      
+      .btn-cta { 
+        background: linear-gradient(135deg, var(--secondary), var(--accent)); 
+        color:#fff; 
+        transition: all 0.3s ease;
+        transform: translateY(0);
+      }
+      
+      .btn-cta:hover { 
+        filter: brightness(1.05); 
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,191,255,0.3);
+      }
+      
+      /* Chip styles */
+      .chip { 
+        color: var(--primary); 
+        background:#E6F7FF; 
+        border:1px solid #B3ECFF; 
+        transition: all 0.3s ease;
+      }
+      
+      .chip:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,191,255,0.2);
+      }
+      
+      .dark .chip { 
+        color: #8AD7FF; 
+        background:#05253f; 
+        border:1px solid #0a3a5f; 
+      }
+      
+      /* Subtle animated tech grid background */
+      .tech-grid { 
+        position: absolute; 
+        inset: 0; 
+        background-size: 48px 48px; 
+        background-image: linear-gradient(to right, rgba(0,31,63,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,31,63,0.06) 1px, transparent 1px); 
+        mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 70%); 
+        animation: gridMove 20s linear infinite;
+      }
+      
+      .dark .tech-grid { 
+        background-image: linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px); 
+      }
+
+      @keyframes gridMove {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(48px, 48px); }
+      }
+
+      /* Mobile Navigation */
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .mobile-menu.open {
+        transform: translateX(0);
+      }
+
+      /* Enhanced Animations */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+
+      .fade-in-up.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-in-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all 0.6s ease;
+      }
+
+      .fade-in-left.animate {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .fade-in-right {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: all 0.6s ease;
+      }
+
+      .fade-in-right.animate {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .stagger-animation {
+        animation-delay: var(--delay, 0s);
+      }
+
+      /* Card Hover Effects */
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      }
+
+      .dark .card-hover:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      }
+
+      /* Pulse Animation for CTA */
+      .pulse-ring {
+        position: relative;
+      }
+
+      .pulse-ring::before {
+        content: '';
+        position: absolute;
+        inset: -4px;
+        border-radius: inherit;
+        background: linear-gradient(135deg, var(--secondary), var(--accent));
+        opacity: 0;
+        animation: pulseRing 2s infinite;
+      }
+
+      @keyframes pulseRing {
+        0% { transform: scale(1); opacity: 0.7; }
+        100% { transform: scale(1.3); opacity: 0; }
+      }
+
+      /* Tab system */
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .tab-button.active {
+        background: var(--secondary);
+        color: white;
+      }
+
+      /* Responsive improvements */
+      @media (max-width: 768px) {
+        .mobile-padding {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+    </style>
+</head>
+<body class="font-body bg-white dark:bg-neutral-900 text-[#4A4A4A] dark:text-neutral-200">
+
+    <header class="sticky top-0 z-50 border-b border-[var(--border)]/70 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/70 glass">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 fade-in-left">
+                <div aria-hidden class="w-9 h-9 rounded-2xl bg-[var(--primary)] relative overflow-hidden">
+                    <svg viewBox="0 0 100 100" class="absolute inset-0">
+                        <defs>
+                            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#00BFFF" />
+                                <stop offset="100%" stop-color="#6A1B9A" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M60 15H40v48a17 17 0 0034 0v-6H60v6a7 7 0 11-14 0V15z" fill="url(#g)" />
+                    </svg>
+                </div>
+                <span class="font-head text-lg tracking-wide text-neutral-900 dark:text-white">Jaiho Digital</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-6 fade-in-up">
+                <a href="index.html" class="text-sm hover:text-[var(--secondary)] transition-colors">Home</a>
+                <a href="index.html#about" class="text-sm hover:text-[var(--secondary)] transition-colors">About</a>
+                <a href="index.html#ventures" class="text-sm hover:text-[var(--secondary)] transition-colors">Subsidiaries</a>
+                <a href="index.html#news" class="text-sm hover:text-[var(--secondary)] transition-colors">News/Blog</a>
+                <a href="#" class="text-sm text-[var(--secondary)] font-medium">Explore More</a>
+                <a href="index.html#contact" class="text-sm hover:text-[var(--secondary)] transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-2 fade-in-right">
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="px-3 py-2 rounded-xl border border-[var(--border)] dark:border-neutral-800 text-xs hover:bg-[var(--soft)] dark:hover:bg-neutral-800 transition-colors">
+                    Dark
+                </button>
+                <a href="index.html#contact" class="hidden sm:inline-block px-4 py-2 rounded-xl btn-cta text-xs font-medium pulse-ring">Contact Us</a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl border border-[var(--border)] dark:border-neutral-800">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path class="close-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white dark:bg-neutral-900 border-l border-[var(--border)] dark:border-neutral-800 z-40 md:hidden">
+            <div class="p-4 border-b border-[var(--border)] dark:border-neutral-800">
+                <span class="font-head text-lg text-neutral-900 dark:text-white">Menu</span>
+            </div>
+            <nav class="p-4 space-y-4">
+                <a href="index.html" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">Home</a>
+                <a href="index.html#about" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">About</a>
+                <a href="index.html#ventures" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">Subsidiaries</a>
+                <a href="index.html#news" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">News/Blog</a>
+                <a href="#" class="block text-sm text-[var(--secondary)] font-medium py-2">Explore More</a>
+                <a href="index.html#contact" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">Contact</a>
+                <a href="index.html#contact" class="block w-full px-4 py-2 rounded-xl btn-cta text-xs font-medium text-center mt-4">Contact Us</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative isolate overflow-hidden py-20 lg:py-28">
+            <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white via-[var(--soft)] to-white dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-900"></div>
+            <div class="tech-grid pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center fade-in-up">
+                    <h1 class="font-head text-4xl md:text-5xl lg:text-6xl font-extrabold text-neutral-900 dark:text-white leading-tight">
+                        Explore Our <span class="text-[var(--secondary)]">Services & Solutions</span>
+                    </h1>
+                    <p class="mt-4 text-base md:text-lg text-neutral-700 dark:text-neutral-300 max-w-3xl mx-auto">
+                        Discover comprehensive solutions across AI, software development, electronics, research, and marketing. 
+                        From cutting-edge products to tailored services, we have everything to drive your business forward.
+                    </p>
+                    
+                    <!-- Category Tabs -->
+                    <div class="mt-8 flex flex-wrap justify-center gap-2 md:gap-4">
+                        <button class="tab-button active px-4 py-2 rounded-xl text-sm font-medium border border-[var(--border)] dark:border-neutral-800 transition-all" data-tab="all">All</button>
+                        <button class="tab-button px-4 py-2 rounded-xl text-sm font-medium border border-[var(--border)] dark:border-neutral-800 transition-all" data-tab="products">Products</button>
+                        <button class="tab-button px-4 py-2 rounded-xl text-sm font-medium border border-[var(--border)] dark:border-neutral-800 transition-all" data-tab="services">Services</button>
+                        <button class="tab-button px-4 py-2 rounded-xl text-sm font-medium border border-[var(--border)] dark:border-neutral-800 transition-all" data-tab="solutions">Solutions</button>
+                        <button class="tab-button px-4 py-2 rounded-xl text-sm font-medium border border-[var(--border)] dark:border-neutral-800 transition-all" data-tab="research">Research</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Sections -->
+        <div class="py-16">
+            <!-- All Tab Content -->
+            <div id="all" class="tab-content active">
+                <!-- AI & Machine Learning Products -->
+                <section class="py-16 bg-[var(--soft)] dark:bg-neutral-950">
+                    <div class="max-w-7xl mx-auto mobile-padding px-4">
+                        <div class="text-center mb-12 fade-in-up">
+                            <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">AI & Machine Learning Products</h2>
+                            <p class="mt-2 text-neutral-700 dark:text-neutral-300">Cutting-edge AI solutions for modern businesses</p>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.1s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-[var(--secondary)] to-[var(--accent)] text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Visio AI</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Advanced data analysis copilot with intelligent insights and automated reporting capabilities.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">Data Analytics</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">AI Insights</span>
+                                </div>
+                            </div>
+
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.2s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-[var(--secondary)] to-[var(--accent)] text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Neural Networks</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Custom neural network solutions for image recognition, NLP, and predictive analytics.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">Deep Learning</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Computer Vision</span>
+                                </div>
+                            </div>
+
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.3s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-[var(--secondary)] to-[var(--accent)] text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">ML Automation</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Automated machine learning pipelines for streamlined model development and deployment.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">AutoML</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">MLOps</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Software Development Services -->
+                <section class="py-16">
+                    <div class="max-w-7xl mx-auto mobile-padding px-4">
+                        <div class="text-center mb-12 fade-in-up">
+                            <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Software Development Services</h2>
+                            <p class="mt-2 text-neutral-700 dark:text-neutral-300">Full-stack development solutions tailored to your needs</p>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.1s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-green-500 to-blue-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Web Applications</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Responsive, scalable web applications using modern frameworks like React, Vue, and Angular.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">React</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Node.js</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">MongoDB</span>
+                                </div>
+                            </div>
+
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.2s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21C5,22.1 5.9,23 7,23H17C18.1,23 19,22.1 19,21V3C19,1.89 18.1,1 17,1Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Mobile Apps</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Native and cross-platform mobile applications for iOS and Android with seamless user experiences.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">React Native</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Flutter</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Swift</span>
+                                </div>
+                            </div>
+
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.3s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M3,3H21C21.56,3 22,3.44 22,4V7H2V4C2,3.44 2.44,3 3,3M2,8H22V20C22,20.56 21.56,21 21,21H3C2.44,21 2,20.56 2,20V8M4,10V12H6V10H4M8,10V12H10V10H8M12,10V12H14V10H12Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">API Development</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Robust RESTful and GraphQL APIs with comprehensive documentation and security features.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">REST API</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">GraphQL</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">JWT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Electronics & Robotics -->
+                <section class="py-16 bg-[var(--soft)] dark:bg-neutral-950">
+                    <div class="max-w-7xl mx-auto mobile-padding px-4">
+                        <div class="text-center mb-12 fade-in-up">
+                            <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Electronics & Robotics</h2>
+                            <p class="mt-2 text-neutral-700 dark:text-neutral-300">Hardware solutions and embedded systems</p>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.1s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-yellow-500 to-orange-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9,2V8H11V11H9V17H15V11H13V8H15V2H9M12,19A1,1 0 0,1 11,20A1,1 0 0,1 10,19A1,1 0 0,1 11,18A1,1 0 0,1 12,19M8,19A1,1 0 0,1 7,20A1,1 0 0,1 6,19A1,1 0 0,1 7,18A1,1 0 0,1 8,19M16,19A1,1 0 0,1 15,20A1,1 0 0,1 14,19A1,1 0 0,1 15,18A1,1 0 0,1 16,19Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Embedded Systems</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Custom embedded solutions for IoT devices, sensors, and automation systems.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">Arduino</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Raspberry Pi</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">IoT</span>
+                                </div>
+                            </div>
+
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.2s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.5,17C18,17.64 18,18.36 17.5,19C17,19.64 16.25,19.64 15.75,19C15.25,18.36 15.25,17.64 15.75,17C16.25,16.36 17,16.36 17.5,17M8.25,17C8.75,16.36 9.5,16.36 10,17C10.5,17.64 10.5,18.36 10,19C9.5,19.64 8.75,19.64 8.25,19C7.75,18.36 7.75,17.64 8.25,17M18.5,11C19,11.64 19,12.36 18.5,13C18,13.64 17.25,13.64 16.75,13C16.25,12.36 16.25,11.64 16.75,11C17.25,10.36 18,10.36 18.5,11M7.25,11C7.75,10.36 8.5,10.36 9,11C9.5,11.64 9.5,12.36 9,13C8.5,13.64 7.75,13.64 7.25,13C6.75,12.36 6.75,11.64 7.25,11M17.5,5C18,5.64 18,6.36 17.5,7C17,7.64 16.25,7.64 15.75,7C15.25,6.36 15.25,5.64 15.75,5C16.25,4.36 17,4.36 17.5,5M8.25,5C8.75,4.36 9.5,4.36 10,5C10.5,5.64 10.5,6.36 10,7C9.5,7.64 8.75,7.64 8.25,7C7.75,6.36 7.75,5.64 8.25,5M12.75,2C13.25,1.36 14,1.36 14.5,2C15,2.64 15,3.36 14.5,4C14,4.64 13.25,4.64 12.75,4C12.25,3.36 12.25,2.64 12.75,2M11.25,2C11.75,1.36 12.5,1.36 13,2C13.5,2.64 13.5,3.36 13,4C12.5,4.64 11.75,4.64 11.25,4C10.75,3.36 10.75,2.64 11.25,2Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Robotics Systems</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Autonomous robots for industrial automation, service applications, and research projects.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">ROS</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Computer Vision</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Automation</span>
+                                </div>
+                            </div>
+
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.3s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-red-500 to-pink-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Circuit Design</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Custom PCB design and electronic circuit development for specialized applications.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">PCB Design</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Altium</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">KiCad</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Research & Development -->
+                <section class="py-16">
+                    <div class="max-w-7xl mx-auto mobile-padding px-4">
+                        <div class="text-center mb-12 fade-in-up">
+                            <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Research & Development</h2>
+                            <p class="mt-2 text-neutral-700 dark:text-neutral-300">Innovation through advanced research and testing</p>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.1s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Reverse Engineering</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Analysis and reconstruction of existing systems for improvement and understanding.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">Analysis</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Reconstruction</span>
+                                </div>
+                            </div>
+
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.2s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-green-500 to-teal-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Quality Testing</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Comprehensive software testing and quality assurance for reliable applications.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">Automation</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Performance</span>
+                                </div>
+                            </div>
+
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.3s">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-red-500 to-orange-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.9 16,12.4 16,13V16C16,17 15,18 14,18H10C9,18 8,17 8,16V13C8,12.4 8.4,11.9 9,11.5V10C9,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.2,9.2 10.2,10V11.5H13.8V10C13.8,9.2 12.8,8.2 12,8.2Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Ethical Hacking</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Security assessments and penetration testing to protect your digital assets.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="chip px-2 py-1 rounded text-xs">Penetration Testing</span>
+                                    <span class="chip px-2 py-1 rounded text-xs">Security Audit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Products Tab Content -->
+            <div id="products" class="tab-content">
+                <section class="py-16">
+                    <div class="max-w-7xl mx-auto mobile-padding px-4">
+                        <div class="text-center mb-12 fade-in-up">
+                            <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Our Products</h2>
+                            <p class="mt-2 text-neutral-700 dark:text-neutral-300">Ready-to-use solutions for immediate deployment</p>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Repeat AI products here -->
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-[var(--secondary)] to-[var(--accent)] text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Visio AI Dashboard</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Complete business intelligence platform with real-time analytics and predictive insights.</p>
+                                <div class="mt-4 flex justify-between items-center">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="chip px-2 py-1 rounded text-xs">SaaS</span>
+                                        <span class="chip px-2 py-1 rounded text-xs">Real-time</span>
+                                    </div>
+                                    <a href="#" class="px-4 py-2 rounded-xl btn-cta text-xs">Try Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Services Tab Content -->
+            <div id="services" class="tab-content">
+                <section class="py-16">
+                    <div class="max-w-7xl mx-auto mobile-padding px-4">
+                        <div class="text-center mb-12 fade-in-up">
+                            <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Our Services</h2>
+                            <p class="mt-2 text-neutral-700 dark:text-neutral-300">Professional services tailored to your business needs</p>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Repeat service cards here -->
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-green-500 to-blue-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Custom Development</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Bespoke software solutions designed specifically for your business requirements.</p>
+                                <div class="mt-4 flex justify-between items-center">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="chip px-2 py-1 rounded text-xs">Custom</span>
+                                        <span class="chip px-2 py-1 rounded text-xs">Scalable</span>
+                                    </div>
+                                    <a href="index.html#contact" class="px-4 py-2 rounded-xl btn-primary text-xs">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Solutions Tab Content -->
+            <div id="solutions" class="tab-content">
+                <section class="py-16">
+                    <div class="max-w-7xl mx-auto mobile-padding px-4">
+                        <div class="text-center mb-12 fade-in-up">
+                            <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Enterprise Solutions</h2>
+                            <p class="mt-2 text-neutral-700 dark:text-neutral-300">Comprehensive solutions for enterprise-level challenges</p>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Digital Transformation</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Complete digital transformation services to modernize your business operations.</p>
+                                <div class="mt-4 flex justify-between items-center">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="chip px-2 py-1 rounded text-xs">Enterprise</span>
+                                        <span class="chip px-2 py-1 rounded text-xs">Modern</span>
+                                    </div>
+                                    <a href="index.html#contact" class="px-4 py-2 rounded-xl btn-primary text-xs">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Research Tab Content -->
+            <div id="research" class="tab-content">
+                <section class="py-16">
+                    <div class="max-w-7xl mx-auto mobile-padding px-4">
+                        <div class="text-center mb-12 fade-in-up">
+                            <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Research Projects</h2>
+                            <p class="mt-2 text-neutral-700 dark:text-neutral-300">Cutting-edge research in emerging technologies</p>
+                        </div>
+                        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="card-hover rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900">
+                                <div class="p-3 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 text-white w-fit">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white">Quantum Computing</h3>
+                                <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Research into quantum algorithms and quantum machine learning applications.</p>
+                                <div class="mt-4 flex justify-between items-center">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="chip px-2 py-1 rounded text-xs">Quantum</span>
+                                        <span class="chip px-2 py-1 rounded text-xs">Research</span>
+                                    </div>
+                                    <a href="index.html#contact" class="px-4 py-2 rounded-xl btn-primary text-xs">Collaborate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <section class="py-20 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] text-white">
+            <div class="max-w-7xl mx-auto mobile-padding px-4 text-center">
+                <h2 class="font-head text-3xl md:text-4xl font-bold">Ready to Get Started?</h2>
+                <p class="mt-4 text-lg opacity-90 max-w-2xl mx-auto">
+                    Let's discuss how our services and solutions can help transform your business and drive innovation.
+                </p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="index.html#contact" class="px-6 py-3 rounded-xl bg-white text-[var(--primary)] font-medium hover:bg-gray-100 transition-colors">
+                        Start a Project
+                    </a>
+                    <a href="index.html#about" class="px-6 py-3 rounded-xl border border-white/30 text-white font-medium hover:bg-white/10 transition-colors">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-[var(--border)] dark:border-neutral-800 py-10">
+        <div class="max-w-7xl mx-auto mobile-padding px-4 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
+            <div class="flex items-center gap-3">
+                <div aria-hidden class="w-8 h-8 rounded-xl bg-[var(--primary)] relative overflow-hidden">
+                    <svg viewBox="0 0 100 100" class="absolute inset-0">
+                        <defs>
+                            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#00BFFF" />
+                                <stop offset="100%" stop-color="#6A1B9A" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M60 15H40v48a17 17 0 0034 0v-6H60v6a7 7 0 11-14 0V15z" fill="url(#g2)" />
+                    </svg>
+                </div>
+                <span class="font-head text-base text-neutral-900 dark:text-white">Jaiho Digital</span>
+            </div>
+            <p class="text-xs text-neutral-600 dark:text-neutral-400">&copy; 2025 Jaiho Digital. All rights reserved.</p>
+            <div class="flex gap-4 text-xs">
+                <a href="#" class="hover:text-[var(--secondary)] transition-colors">Privacy</a>
+                <a href="#" class="hover:text-[var(--secondary)] transition-colors">Terms</a>
+                <a href="index.html" class="hover:text-[var(--secondary)] transition-colors">Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const htmlElement = document.documentElement;
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const menuIcon = document.querySelector('.menu-icon');
+            const closeIcon = document.querySelector('.close-icon');
+
+            // Dark Mode Toggle
+            themeToggle.addEventListener('click', () => {
+                htmlElement.classList.toggle('dark');
+                const isDark = htmlElement.classList.contains('dark');
+                themeToggle.textContent = isDark ? 'Light' : 'Dark';
+                
+                // Save preference to localStorage
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+
+            // Load saved theme preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                if (savedTheme === 'dark') {
+                    htmlElement.classList.add('dark');
+                    themeToggle.textContent = 'Light';
+                }
+            }
+
+            // Mobile Menu Toggle
+            function toggleMobileMenu() {
+                const isOpen = mobileMenu.classList.contains('open');
+                
+                if (isOpen) {
+                    mobileMenu.classList.remove('open');
+                    mobileOverlay.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                } else {
+                    mobileMenu.classList.add('open');
+                    mobileOverlay.classList.remove('hidden');
+                    menuIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+            // Tab System
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show corresponding content
+                    const targetContent = document.getElementById(targetTab);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // Enhanced Scroll Reveal Animation
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -100px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Handle different animation types
+                        if (entry.target.classList.contains('fade-in-up')) {
+                            entry.target.classList.add('animate');
+                        } else if (entry.target.classList.contains('fade-in-left')) {
+                            entry.target.classList.add('animate');
+                        } else if (entry.target.classList.contains('fade-in-right')) {
+                            entry.target.classList.add('animate');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements with animation classes
+            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Initialize animations on page load
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach((el, index) => {
+                    if (el.getBoundingClientRect().top < window.innerHeight) {
+                        setTimeout(() => {
+                            el.classList.add('animate');
+                        }, index * 100);
+                    }
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
