@@ -2,7 +2,8 @@
 <html lang="en" class="">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
     <title>Jaiho Digital | Tech For Earth, Tech For All</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,12 +36,12 @@
       /* Glassmorphism effect for the navbar */
       .glass { 
         backdrop-filter: blur(10px); 
-        background: rgba(255,255,255,0.8); 
+        background: rgba(255,255,255,0.9); 
         transition: all 0.3s ease;
       }
       
       .dark .glass { 
-        background: rgba(0,0,0,0.4); 
+        background: rgba(0,0,0,0.8); 
       }
       
       .btn-primary { 
@@ -176,14 +177,43 @@
         }
       }
 
-      /* Mobile Navigation */
+      /* FIXED Mobile Navigation */
       .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 280px;
+        background: white;
         transform: translateX(100%);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease-in-out;
+        z-index: 9999;
+        overflow-y: auto;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+      }
+
+      .dark .mobile-menu {
+        background: #1f2937;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.3);
       }
 
       .mobile-menu.open {
         transform: translateX(0);
+      }
+
+      .mobile-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 9998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
       }
 
       /* Enhanced Animations */
@@ -337,7 +367,6 @@
 
       .timeline-content {
         background: white;
-        dark:background: #1f2937;
         border-radius: 0.75rem;
         padding: 1rem;
         border: 1px solid var(--border);
@@ -411,10 +440,10 @@
         color: white;
       }
 
-      /* Responsive improvements */
+      /* RESPONSIVE IMPROVEMENTS */
       @media (max-width: 768px) {
         .hero-title {
-          font-size: 2.5rem;
+          font-size: 2rem;
           line-height: 1.2;
         }
         
@@ -434,6 +463,59 @@
         .timeline-dot {
           left: -0.5rem;
         }
+
+        /* Better mobile spacing */
+        section {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+        }
+
+        /* Mobile-friendly cards */
+        .card-hover:hover {
+          transform: translateY(-4px);
+        }
+
+        /* Better mobile forms */
+        .mobile-form-stack {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        /* Hide desktop navigation completely on mobile */
+        .desktop-nav {
+          display: none !important;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero-title {
+          font-size: 1.75rem;
+        }
+
+        /* Stack buttons vertically on very small screens */
+        .mobile-btn-stack {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .mobile-btn-stack > * {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* Prevent horizontal scroll */
+      body {
+        overflow-x: hidden;
+      }
+
+      /* Better touch targets for mobile */
+      @media (max-width: 768px) {
+        button, a {
+          min-height: 44px;
+          min-width: 44px;
+        }
       }
     </style>
 </head>
@@ -443,25 +525,17 @@
         <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="#home" class="flex items-center gap-3 fade-in-left">
                 <div aria-hidden class="w-9 h-9 rounded-2xl bg-[var(--primary)] relative overflow-hidden">
-                    <!---<svg viewBox="0 0 100 100" class="absolute inset-0">
-                        <defs>
-                            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#00BFFF" />
-                                <stop offset="100%" stop-color="#6A1B9A" />
-                            </linearGradient>
-                        </defs>
-                        <path d="M60 15H40v48a17 17 0 0034 0v-6H60v6a7 7 0 11-14 0V15z" fill="url(#g)" />
-                    </svg>--->
+                    <img src="images/jd_logo.jpeg" alt="Jaiho Digital Logo" class="w-full h-full object-contain" />
                 </div>
                 <span class="font-head text-lg tracking-wide text-neutral-900 dark:text-white">Jaiho Digital</span>
             </a>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center gap-6 fade-in-up">
+            <nav class="desktop-nav hidden md:flex items-center gap-6 fade-in-up">
                 <a href="#home" class="text-sm hover:text-[var(--secondary)] transition-colors">Home</a>
-                <a href="#about" class="text-sm hover:text-[var(--secondary)] transition-colors">About</a>
-                <a href="#ventures" class="text-sm hover:text-[var(--secondary)] transition-colors">Subsidiaries</a>
-                <a href="#news" class="text-sm hover:text-[var(--secondary)] transition-colors">News/Blog</a>
+                <a href="about_us.html" class="text-sm hover:text-[var(--secondary)] transition-colors">About</a>
+                <a href="#ventures" class="text-sm hover:text-[var(--secondary)] transition-colors">Our Universe</a>
+                <a href="research.html" class="text-sm hover:text-[var(--secondary)] transition-colors">Research</a>
                 <a href="explore_more.html" class="text-sm hover:text-[var(--secondary)] transition-colors">Explore More</a>
                 <a href="#contact" class="text-sm hover:text-[var(--secondary)] transition-colors">Contact</a>
             </nav>
@@ -482,24 +556,24 @@
             </div>
         </div>
 
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white dark:bg-neutral-900 border-l border-[var(--border)] dark:border-neutral-800 z-40 md:hidden">
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-overlay" class="mobile-overlay md:hidden"></div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden">
             <div class="p-4 border-b border-[var(--border)] dark:border-neutral-800">
                 <span class="font-head text-lg text-neutral-900 dark:text-white">Menu</span>
             </div>
             <nav class="p-4 space-y-4">
-                <a href="#home" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">Home</a>
-                <a href="#about" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">About</a>
-                <a href="#ventures" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">Subsidiaries</a>
-                <a href="#news" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">News/Blog</a>
-                <a href="explore_more.html" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">Explore More</a>
-                <a href="#contact" class="block text-sm hover:text-[var(--secondary)] transition-colors py-2">Contact</a>
-                <a href="#contact" class="block w-full px-4 py-2 rounded-xl btn-cta text-xs font-medium text-center mt-4">Contact Us</a>
+                <a href="#home" class="block text-sm hover:text-[var(--secondary)] transition-colors py-3 border-b border-[var(--border)] dark:border-neutral-800">Home</a>
+                <a href="about_us.html" class="block text-sm hover:text-[var(--secondary)] transition-colors py-3 border-b border-[var(--border)] dark:border-neutral-800">About</a>
+                <a href="#ventures" class="block text-sm hover:text-[var(--secondary)] transition-colors py-3 border-b border-[var(--border)] dark:border-neutral-800">Our Universe</a>
+                <a href="research.html" class="block text-sm hover:text-[var(--secondary)] transition-colors py-3 border-b border-[var(--border)] dark:border-neutral-800">Research</a>
+                <a href="explore_more.html" class="block text-sm hover:text-[var(--secondary)] transition-colors py-3 border-b border-[var(--border)] dark:border-neutral-800">Explore More</a>
+                <a href="#contact" class="block text-sm hover:text-[var(--secondary)] transition-colors py-3 border-b border-[var(--border)] dark:border-neutral-800">Contact</a>
+                <a href="#contact" class="block w-full px-4 py-3 rounded-xl btn-cta text-sm font-medium text-center mt-6">Contact Us</a>
             </nav>
         </div>
-
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
     </header>
 
     <main>
@@ -510,20 +584,21 @@
             <div class="max-w-7xl mx-auto px-4 py-20 lg:py-28 w-full">
                 <div class="grid lg:grid-cols-2 gap-10 items-center">
                     <div class="fade-in-left">
-                            <h1 class="font-head hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold text-neutral-900 dark:text-white leading-tight">
-                                Tech For Earth, Tech For All&nbsp; &nbsp; &nbsp;<span class="text-[var(--secondary)]">Jaiho Digital</span>
-                            </h1>
+                        <h1 class="font-head hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-neutral-900 dark:text-white leading-tight">
+                            Tech For Earth, Tech For All&nbsp;&nbsp;<span class="text-[var(--secondary)]">Jaiho Digital</span>
+                        </h1>
                         <p class="mt-4 text-base md:text-lg text-neutral-700 dark:text-neutral-300 max-w-xl fade-in-up stagger-animation" style="--delay: 0.2s">
                             The heart of tomorrow's tech—uniting AI, robotics, software, electronics and quantum computing into scalable real‑world impact.
                         </p>
-                        <div class="mt-6 flex flex-wrap gap-3 fade-in-up stagger-animation" style="--delay: 0.4s">
-                            <a href="#ventures" class="px-5 py-3 rounded-xl btn-cta text-sm font-medium">Explore Our Ecosystem</a>
-                            <a href="#about" class="px-5 py-3 rounded-xl btn-primary text-sm font-medium">Learn More</a>
+                        <div class="mt-6 flex flex-col sm:flex-row flex-wrap gap-3 fade-in-up stagger-animation mobile-btn-stack" style="--delay: 0.4s">
+                            <a href="#ventures" class="px-5 py-3 rounded-xl btn-cta text-sm font-medium text-center">Explore Our Ecosystem</a>
+                            <a href="#about" class="px-5 py-3 rounded-xl btn-primary text-sm font-medium text-center">Learn More</a>
                         </div>
                         <div class="mt-6 flex gap-2 flex-wrap fade-in-up stagger-animation" style="--delay: 0.6s">
                             <span class="chip px-3 py-1 rounded-full text-xs">AI & ML</span>
                             <span class="chip px-3 py-1 rounded-full text-xs">Robotics</span>
                             <span class="chip px-3 py-1 rounded-full text-xs">Quantum</span>
+                            <span class="chip px-3 py-1 rounded-full text-xs">Electronics</span>
                             <span class="chip px-3 py-1 rounded-full text-xs">BCI</span>
                         </div>
                     </div>
@@ -542,7 +617,6 @@
                                 <div class="slide">
                                     <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1400&auto=format&fit=crop" alt="Robotics and automation" loading="lazy">
                                 </div>
-                                
                                 <div class="slide">
                                     <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1400&auto=format&fit=crop" alt="Software development and coding" loading="lazy">
                                 </div>
@@ -571,7 +645,7 @@
                         <p class="mt-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
                             Jaiho Digital is the parent company driving a family of specialized ventures in AI, software, robotics, and beyond. Our mission is to integrate cutting‑edge technology for global progress, and our vision is to lead the next era of digital transformation with ethics, collaboration, and affordability at the core.
                         </p>
-                        <div class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+                        <div class="mt-6 grid grid-cols-2 gap-3 text-sm">
                             <div class="p-3 rounded-xl border border-[var(--border)] dark:border-neutral-800 hover:shadow-md transition-shadow">Innovation</div>
                             <div class="p-3 rounded-xl border border-[var(--border)] dark:border-neutral-800 hover:shadow-md transition-shadow">Ethics</div>
                             <div class="p-3 rounded-xl border border-[var(--border)] dark:border-neutral-800 hover:shadow-md transition-shadow">Collaboration</div>
@@ -646,7 +720,7 @@
             <div class="max-w-7xl mx-auto mobile-padding px-4">
                 <div class="flex items-end justify-between gap-6 flex-wrap fade-in-up">
                     <div>
-                        <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Our Ventures</h2>
+                        <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Our Universe</h2>
                         <p class="mt-2 text-neutral-700 dark:text-neutral-300 max-w-2xl">
                             We orchestrate a symphony of specialized companies—from groundbreaking AI products at Jaiho Labs to reliable IT services at Jaiho TechServe.
                         </p>
@@ -684,7 +758,7 @@
                             <span class="text-xs px-2 py-1 rounded-full chip">Services</span>
                         </div>
                         <h3 class="mt-4 font-head text-xl text-neutral-900 dark:text-white group-hover:text-[var(--secondary)] transition-colors">Jaiho TechServe</h3>
-                        <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Delivering tailored services in web/app development, custom software, AI integration, and more.</p>
+                        <p class="mt-2 text-sm text-neutral-700 dark:text-neutral-300">Delivering tailored solutions &services in web/app development, custom software, AI integration, and more.</p>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-[var(--secondary)]">
                             <span>Learn More</span>
                             <svg viewBox="0 0 24 24" class="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true">
@@ -712,7 +786,6 @@
                         </div>
                     </a>
 
-                    <!-- Fixed Jaiho Kernel with proper R&D icon -->
                     <a href="page_kernel.html" target="_blank" rel="noreferrer" class="group card-hover block rounded-2xl border border-[var(--border)] dark:border-neutral-800 p-6 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.4s">
                         <div class="flex items-center justify-between">
                             <div class="p-3 rounded-xl bg-[var(--soft)] dark:bg-neutral-800 text-[var(--secondary)]">
@@ -758,13 +831,13 @@
             <div class="max-w-7xl mx-auto mobile-padding px-4">
                 <div class="flex items-end justify-between gap-6 flex-wrap fade-in-up">
                     <div>
-                        <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">News & Blog</h2>
+                        <h2 class="font-head text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white">Research</h2>
                         <p class="mt-2 text-neutral-700 dark:text-neutral-300">Company updates, deep‑dives, and venture spotlights.</p>
                     </div>
                     <a href="#" class="px-5 py-3 rounded-xl btn-primary text-sm font-medium">Visit Blog</a>
                 </div>
 
-                <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <article class="card-hover rounded-2xl overflow-hidden border border-[var(--border)] dark:border-neutral-800 bg-white dark:bg-neutral-900 fade-in-up stagger-animation" style="--delay: 0.1s">
                         <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1200&auto=format&fit=crop" alt="How AI is Revolutionizing Robotics" class="w-full h-44 object-cover" loading="lazy">
                         <div class="p-5">
@@ -823,8 +896,6 @@
                         </p>
                         <ul class="mt-6 space-y-2 text-sm">
                             <li><strong>Email:</strong> jaihodigital@gmail.com</li>
-                            <!--<li><strong>Phone:</strong> +91 00000 00000</li>--->
-                            <!--<li><strong>Instagram:</strong> <a href="#" class="text-[var(--secondary)] hover:underline">@jaiho_reach</a></li>-->
                         </ul>
                         
                         <!-- Social Media Links -->
@@ -859,18 +930,20 @@
                     </div>
 
                     <form class="p-6 rounded-2xl border border-[var(--border)] dark:border-neutral-800 bg-white dark:bg-neutral-900 fade-in-right">
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="text-xs opacity-80">Name</label>
-                                <input class="mt-1 w-full rounded-xl border border-[var(--border)] dark:border-neutral-800 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-[var(--secondary)] transition-all" placeholder="Your name" />
+                        <div class="grid gap-4 mobile-form-stack">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="text-xs opacity-80">Name</label>
+                                    <input class="mt-1 w-full rounded-xl border border-[var(--border)] dark:border-neutral-800 bg-transparent px-3 py-3 outline-none focus:ring-2 focus:ring-[var(--secondary)] transition-all" placeholder="Your name" />
+                                </div>
+                                <div>
+                                    <label class="text-xs opacity-80">Email</label>
+                                    <input type="email" class="mt-1 w-full rounded-xl border border-[var(--border)] dark:border-neutral-800 bg-transparent px-3 py-3 outline-none focus:ring-2 focus:ring-[var(--secondary)] transition-all" placeholder="you@company.com" />
+                                </div>
                             </div>
                             <div>
-                                <label class="text-xs opacity-80">Email</label>
-                                <input type="email" class="mt-1 w-full rounded-xl border border-[var(--border)] dark:border-neutral-800 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-[var(--secondary)] transition-all" placeholder="you@company.com" />
-                            </div>
-                            <div class="md:col-span-2">
                                 <label class="text-xs opacity-80">Reason</label>
-                                <select class="mt-1 w-full rounded-xl border border-[var(--border)] dark:border-neutral-800 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-[var(--secondary)] transition-all">
+                                <select class="mt-1 w-full rounded-xl border border-[var(--border)] dark:border-neutral-800 bg-transparent px-3 py-3 outline-none focus:ring-2 focus:ring-[var(--secondary)] transition-all">
                                     <option>General Inquiry</option>
                                     <option>Jaiho Labs</option>
                                     <option>Jaiho TechServe</option>
@@ -879,9 +952,9 @@
                                     <option>Jaiho Reach</option>
                                 </select>
                             </div>
-                            <div class="md:col-span-2">
+                            <div>
                                 <label class="text-xs opacity-80">Message</label>
-                                <textarea rows="4" class="mt-1 w-full rounded-xl border border-[var(--border)] dark:border-neutral-800 bg-transparent px-3 py-2 outline-none focus:ring-2 focus:ring-[var(--secondary)] transition-all" placeholder="Tell us about your needs..."></textarea>
+                                <textarea rows="4" class="mt-1 w-full rounded-xl border border-[var(--border)] dark:border-neutral-800 bg-transparent px-3 py-3 outline-none focus:ring-2 focus:ring-[var(--secondary)] transition-all" placeholder="Tell us about your needs..."></textarea>
                             </div>
                         </div>
                         <div class="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -889,7 +962,7 @@
                                 <input type="checkbox" class="accent-[var(--secondary)]" />
                                 Subscribe to newsletter
                             </label>
-                            <button type="button" class="px-5 py-2.5 rounded-xl btn-cta text-sm font-medium w-full sm:w-auto">
+                            <button type="button" class="px-5 py-3 rounded-xl btn-cta text-sm font-medium w-full sm:w-auto">
                                 <span class="flex items-center justify-center gap-2">
                                     Send Message
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -958,19 +1031,21 @@
                 }
             }
 
-            // Mobile Menu Toggle
+            // FIXED Mobile Menu Toggle
             function toggleMobileMenu() {
                 const isOpen = mobileMenu.classList.contains('open');
                 
                 if (isOpen) {
+                    // Close menu
                     mobileMenu.classList.remove('open');
-                    mobileOverlay.classList.add('hidden');
+                    mobileOverlay.classList.remove('active');
                     menuIcon.classList.remove('hidden');
                     closeIcon.classList.add('hidden');
                     document.body.style.overflow = '';
                 } else {
+                    // Open menu
                     mobileMenu.classList.add('open');
-                    mobileOverlay.classList.remove('hidden');
+                    mobileOverlay.classList.add('active');
                     menuIcon.classList.add('hidden');
                     closeIcon.classList.remove('hidden');
                     document.body.style.overflow = 'hidden';
@@ -986,6 +1061,13 @@
                 link.addEventListener('click', () => {
                     setTimeout(toggleMobileMenu, 100);
                 });
+            });
+
+            // Close menu on window resize if opened
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768 && mobileMenu.classList.contains('open')) {
+                    toggleMobileMenu();
+                }
             });
 
             // Enhanced Scroll Reveal Animation
