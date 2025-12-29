@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hub | Ecosystem Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hub.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-th"></i>
+            <span>The Hub</span>
+        </div>
+
+        <!-- PRODUCTS -->
+        <div class="nav-group">
+            <div class="nav-label">Products</div>
+
+            <button class="nav-item active" data-filter="all">
+                <i class="fas fa-border-all"></i> All Products
+            </button>
+            <button class="nav-item" data-filter="ai">
+                <i class="fas fa-brain"></i> AI & Labs
+            </button>
+            <button class="nav-item" data-filter="software">
+                <i class="fas fa-code"></i> Software
+            </button>
+            <button class="nav-item" data-filter="utility">
+                <i class="fas fa-toolbox"></i> Utilities
+            </button>
+            <button class="nav-item" data-filter="service">
+                <i class="fas fa-briefcase"></i> Services
+            </button>
+            <button class="nav-item" data-filter="electronics">
+                <i class="fas fa-microchip"></i> Electronics
+            </button>
+        </div>
+
+        <!-- RESOURCES -->
+        <div class="nav-group">
+            <div class="nav-label">Resources</div>
+
+            <button class="nav-item resource" data-filter="learning">
+                <i class="fas fa-graduation-cap"></i> Learning
+            </button>
+            <button class="nav-item resource" data-filter="research">
+                <i class="fas fa-flask"></i> Research Papers
+            </button>
+            <button class="nav-item resource" data-filter="docs">
+                <i class="fas fa-book"></i> Documentation
+            </button>
+            <button class="nav-item resource" data-filter="manual">
+                <i class="fas fa-file-lines"></i> Product Manuals
+            </button>
+            <button class="nav-item resource" data-filter="developer">
+                <i class="fas fa-code"></i> Developer Support
+            </button>
+            <button class="nav-item resource" data-filter="whitepaper">
+                <i class="fas fa-file-pdf"></i> Whitepapers
+            </button>
+        </div>
+
+        <div class="nav-group mt-auto">
+            <a href="index.html" class="nav-item back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Corporate
+            </a>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-view">
+
+        <header class="topbar">
+            <div class="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search products & resources...">
+            </div>
+        </header>
+
+        <div class="content-body">
+
+            <div class="grid-header">
+                <h1>Jaiho Ecosystem</h1>
+                <p>Products, platforms, and knowledge powering Jaiho Digital.</p>
+            </div>
+
+            <div class="app-grid">
+
+                <!-- PRODUCTS -->
+                <div class="app-card" data-cat="ai" data-name="visio ai">
+                    <div class="icon-box ai"><i class="fas fa-chart-pie"></i></div>
+                    <div class="meta">
+                        <h3>Visio AI</h3>
+                        <p>AutoML and Data science Platform</p>
+                    </div>
+                    <a href="https://visio-ai.streamlit.app" target="_blank" class="launch-btn">Open</a>
+                </div>
+
+                <div class="app-card" data-cat="ai" data-name="radiant ai">
+                    <div class="icon-box ai"><i class="fas fa-image"></i></div>
+                    <div class="meta">
+                        <h3>Radiant AI AI</h3>
+                        <p>Advance AI Image Processing</p>
+                    </div>
+                    <a href="#" class="launch-btn">Open</a>
+                </div>
+
+                <div class="app-card" data-cat="utility" data-name="jaiho pulse">
+                    <div class="icon-box util"><i class="fas fa-heart-pulse"></i></div>
+                    <div class="meta">
+                        <h3>Jaiho Pulse</h3>
+                        <p>Status Monitor</p>
+                    </div>
+                    <a href="#" class="launch-btn">Open</a>
+                </div>
+
+                <div class="app-card" data-cat="service" data-name="techserve">
+                    <div class="icon-box serv"><i class="fas fa-code"></i></div>
+                    <div class="meta">
+                        <h3>TechServe</h3>
+                        <p>Custom Development</p>
+                    </div>
+                    <a href="#" class="launch-btn">Visit</a>
+                </div>
+
+                <!-- RESOURCES -->
+                <div class="resource-card" data-cat="learning" data-name="jaiho ai academy">
+                    <div class="resource-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="meta">
+                        <h3>Jaiho AI Academy</h3>
+                        <p>Courses & learning tracks</p>
+                    </div>
+                    <a href="#" class="launch-btn">Explore</a>
+                </div>
+
+                <div class="resource-card" data-cat="research" data-name="quantum ai research">
+                    <div class="resource-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="meta">
+                        <h3>Quantum-AI Research</h3>
+                        <p>Internal & public papers</p>
+                    </div>
+                    <a href="#" class="launch-btn">Read</a>
+                </div>
+
+                <div class="resource-card" data-cat="docs" data-name="jaiho documentation">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="meta">
+                        <h3>Jaiho Docs</h3>
+                        <p>APIs, SDKs, Guides</p>
+                    </div>
+                    <a href="#" class="launch-btn">Open</a>
+                </div>
+
+                <div class="resource-card" data-cat="whitepaper" data-name="sustainability whitepaper">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="meta">
+                        <h3>Sustainability Whitepaper</h3>
+                        <p>Tech for Earth vision</p>
+                    </div>
+                    <a href="#" class="launch-btn">Download</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+const buttons = document.querySelectorAll('.nav-item[data-filter]');
+const cards = document.querySelectorAll('.app-card, .resource-card');
+const search = document.getElementById('searchInput');
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters(btn.dataset.filter, search.value);
+    });
+});
+
+search.addEventListener('input', e => {
+    const active = document.querySelector('.nav-item.active')?.dataset.filter || 'all';
+    applyFilters(active, e.target.value);
+});
+
+function applyFilters(filter, text) {
+    const q = text.toLowerCase();
+
+    cards.forEach(card => {
+        const matchCat = filter === 'all' || card.dataset.cat === filter;
+        const matchText = card.dataset.name.includes(q);
+        card.style.display = (matchCat && matchText) ? 'flex' : 'none';
+    });
+}
+</script>
+
+</body>
+</html>
