@@ -1,0 +1,380 @@
+{
+  "products": [
+    {
+      "id": "visio-ai",
+      "name": "Visio AI",
+      "category": "ai",
+      "status": "Live",
+      "description": "AutoML and Data Science Platform",
+      "fullDescription": "Visio AI is a full-featured, no-code platform for data analysis, machine learning, and data visualization. It is built to empower developers, analysts, and students to analyze datasets, generate visual insights, and train ML models — all through a friendly UI without extensive coding.",
+      "features": ["Data Preprocessing", "EDA", "Automated ML Pipeline", "Data Visualization", "ML Algorithms", "Export Models", "Real-time Analytics"],
+      "link": "https://visio-ai.streamlit.app",
+      "icon": "fa-chart-pie"
+    },
+    {
+      "id": "radiant-ai",
+      "name": "Radiant AI",
+      "category": "ai",
+      "status": "Live",
+      "description": "Advanced AI Image Processing",
+      "fullDescription": "Radiant AI transform your images with next-generation AI tools. Enhance, detect, restore old and degraded photos, colorize old photos. It provides cutting-edge image processing capabilities including enhancement, adjustment, upscaling, colorize, object/person detection, segmentation, and style transfer.",
+      "features": ["Image Enhancement", "Upscaling", "Restoration", "Colorize", "Object Detection", "Segmentation", "Style Transfer", "Batch Processing"],
+      "link": "https://huggingface.co/spaces/arshvir/radiant_ai",
+      "icon": "fa-image"
+    },
+    {
+      "id": "spa-ai",
+      "name": "SPA AI",
+      "category": "ai",
+      "status": "In Development",
+      "description": "Smart Process Automation",
+      "fullDescription": "Automates complex business processes using artificial intelligence to reduce manual work and improve operational efficiency.",
+      "features": ["Process Mining", "Workflow Automation", "RPA Integration", "Custom Rules Engine"],
+      "link": "pages/jaiho_labs_coming_soon.html",
+      "icon": "fa-robot"
+    },
+    {
+      "id": "ngibs",
+      "name": "NGIBS",
+      "category": "ai",
+      "status": "Beta",
+      "description": "Next Gen Intelligent Browsing System",
+      "fullDescription": "NGIBS (Next Gen Intelligent Browsing System) is an AI-powered search web app that helps you find and understand information more easily. Instead of just showing links, it uses advanced AI models to understand your question, search the web when needed, and summarize the most useful results for you.",
+      "features": ["Smart AI-Powered Search", "Live Web Search & Summaries", "Deep Think Mode", "Privacy Focused", "Context-Aware Responses", "Multiple AI Models"],
+      "link": "https://huggingface.co/spaces/jaihodigital/ngibs-ai-search",
+      "icon": "fa-magnifying-glass-chart"
+    },
+    {
+      "id": "fission-ai",
+      "name": "Fission AI",
+      "category": "ai",
+      "status": "Beta",
+      "description": "All-in-one multimodal AI content creation platform",
+      "fullDescription": "Fission AI is a powerful multimodal AI platform that brings multiple AI capabilities together in one simple interface. It enables users to generate videos, images, written content, and research outputs from text-based input using advanced AI models. Text to Video automatically creates visuals, stitches them into a video, and adds AI-generated narration, while Text to Text uses an LLM to generate, rewrite, or enhance content.",
+      "features": ["Text to Video Generation", "Text to Image Generation", "Text to Text (LLM)", "AI-Powered Deep Research", "Multimodal AI Platform"],
+      "link": "https://github.com/avarshvir/fission_ai",
+      "icon": "fas fa-atom"
+    },
+    {
+      "id": "nlp-lab",
+      "name": "NLP Intelligent Lab",
+      "category": "ai",
+      "status": "Live",
+      "description": "Hands-on laboratory for learning and experimenting with NLP",
+      "fullDescription": "NLP Intelligent Lab is a hands-on environment for exploring and building natural language processing systems. Experiment with text preprocessing, feature extraction, syntax and semantic analysis, sequence models, transformers, language generation, dialogue systems, speech processing, sentiment analysis, and more. Build, test, and deploy NLP models in a practical workspace designed for innovation and research.",
+      "features": ["Text Classification and Generation", "Transformers and LLMs", "Sentiment Analysis", "Feature Extraction and Translation", "Projects"],
+      "link": "https://huggingface.co/spaces/jaihodigital/nlp-intelligent-lab",
+      "icon": "fa-language"
+    },
+    {
+      "id": "cv-lab",
+      "name": "CV Intelligent Lab",
+      "category": "ai",
+      "status": "In Development",
+      "description": "Hands-on lab for exploring computer vision and visual AI systems",
+      "fullDescription": "CV Intelligent Lab is a practical environment for experimenting with computer vision techniques. Build and test models for image classification, object detection, face recognition, video analysis, and more. Ideal for prototyping and exploring visual AI applications in a unified workspace.",
+      "features": ["Object Detection", "Face Recognition", "Image Classification", "Video Analysis", "Tracking & Motion Analysis", "Generative Vision Models", "Projects & Experiments"],
+      "link": "#",
+      "icon": "fa-camera"
+    },
+    {
+      "id": "ml-lab",
+      "name": "ML Intelligent Lab",
+      "category": "ai",
+      "status": "In Development",
+      "description": "Hands-on lab for building and experimenting with machine learning models",
+      "fullDescription": "ML Intelligent Lab is a practical environment for designing, training, and evaluating machine learning models. Experiment with feature engineering, data preprocessing, supervised and unsupervised algorithms, cross-validation, ensemble methods, and model deployment in a unified workspace for real-world ML applications.",
+      "features": ["Supervised & Unsupervised Learning", "Model Training", "Feature Engineering", "Cross-Validation", "Ensemble Methods", "Projects & Experiments"],
+      "link": "#",
+      "icon": "fa-cogs"
+    },
+    {
+      "id": "dl-lab",
+      "name": "DL Intelligent Lab",
+      "category": "ai",
+      "status": "In Development",
+      "description": "Hands-on lab for designing and experimenting with deep learning models",
+      "fullDescription": "DL Intelligent Lab is a practical workspace for building, training, and testing deep learning models. Explore neural networks, convolutional and recurrent architectures, transformers, sequence modeling, generative networks, and model deployment. Ideal for experimenting with advanced AI techniques in a unified lab environment.",
+      "features": ["Neural Network Design & Training", "Convolutional Neural Networks (CNNs)",  "Recurrent Neural Networks (RNNs, LSTM, GRU)", "Transformer Models (BERT, GPT, T5)", "Generative Models (GANs, VAEs)", "Sequence Modeling & Time Series Analysis"],
+      "link": "pages/jaiho_labs_coming_soon.html",
+      "icon": "fa-project-diagram"
+    },
+    {
+      "id": "ai-lab",
+      "name": "AI Intelligent Lab",
+      "category": "ai",
+      "status": "In Development",
+      "description": "Practical lab for experimenting with general AI systems and applications",
+      "fullDescription": "AI Intelligent Lab is a unified environment for building, testing, and deploying artificial intelligence systems. Explore machine learning, deep learning, computer vision, natural language processing, reinforcement learning, and multimodal AI applications. Ideal for prototyping intelligent systems and experimenting with AI solutions across domains.",
+      "features": ["Multi-Modal AI", "Research Tools", "AI Algorithms"],
+      "link": "pages/jaiho_labs_coming_soon.html",
+      "icon": "fa-microchip"
+    },
+    {
+      "id": "sentiment-model",
+      "name": "Sentiment Model",
+      "category": "ai",
+      "status": "Live",
+      "description": "Pre-trained model for analyzing emotions and opinions in text",
+      "fullDescription": "Sentiment Model is a multi-class sentiment analysis system for text data, capable of classifying input as Positive, Negative, Neutral, or Irrelevant. It uses a custom preprocessing pipeline with CountVectorizer, TF-IDF transformation, and a Logistic Regression classifier, providing fast, interpretable, and robust predictions for text-based applications.",
+      "features": ["Multi-class Sentiment Analysis (Positive, Negative, Neutral, Irrelevant)", "Custom Text Preprocessing Pipeline", "CountVectorizer for token counts", "High Accuracy: ~90% on validation set", "Easy Integration & Usage via Python"],
+      "link": "https://huggingface.co/jaiholabs/sentiment-analysis-lr",
+      "icon": "fa-face-smile"
+    },
+    {
+      "id": "dev-link",
+      "name": "Dev Link",
+      "category": "software",
+      "status": "Live",
+      "description": "Developer Collaboration",
+      "fullDescription": "Platform connecting developers, facilitating code sharing, and project management.",
+      "features": ["Code Sharing", "Real-time Collaboration", "Project Management"],
+      "link": "#",
+      "icon": "fa-code-branch"
+    },
+    {
+      "id": "gita-py",
+      "name": "Gita Py",
+      "category": "software",
+      "status": "Live",
+      "description": "Python Library",
+      "fullDescription": "A Python library providing easy access to Bhagavad Gita verses, translations, and commentaries.",
+      "features": ["Multiple Translations", "Search Functionality", "Verse Metadata", "Pip Installable"],
+      "link": "#",
+      "icon": "fa-book-open"
+    },
+    {
+      "id": "pharmacy-sys",
+      "name": "Pharmacy Management",
+      "category": "software",
+      "status": "Live",
+      "description": "Inventory & Billing System",
+      "fullDescription": "Comprehensive software handling inventory, prescriptions, billing, and customer management for pharmacies.",
+      "features": ["Inventory Tracking", "Billing", "Customer DB", "Expiry Alerts"],
+      "link": "#",
+      "icon": "fa-pills"
+    },
+    {
+      "id": "gym-sys",
+      "name": "Gym Management",
+      "category": "software",
+      "status": "Live",
+      "description": "Fitness Center System",
+      "fullDescription": "All-in-one gym management solution for member tracking, attendance, and workout planning.",
+      "features": ["Member Management", "Attendance", "Billing", "Workout Plans"],
+      "link": "#",
+      "icon": "fa-dumbbell"
+    },
+    {
+      "id": "dev-link-web",
+      "name": "Dev Link Web",
+      "category": "webapp",
+      "status": "Live",
+      "description": "Web Developer Platform",
+      "fullDescription": "Browser-based version of Dev Link for seamless collaboration.",
+      "features": ["Cloud-Based", "Real-time Sync", "No Installation"],
+      "link": "#",
+      "icon": "fa-globe"
+    },
+    {
+      "id": "j-invoice",
+      "name": "J Invoice Web",
+      "category": "webapp",
+      "status": "Live",
+      "description": "Smart Invoice Generation",
+      "fullDescription": "Modern web app for creating and tracking invoices with automated billing.",
+      "features": ["Templates", "PDF Export", "Payment Tracking"],
+      "link": "#",
+      "icon": "fa-file-invoice"
+    },
+    {
+      "id": "kernel-pulse",
+      "name": "Kernel Pulse",
+      "category": "webapp",
+      "status": "Live",
+      "description": "Status Page & Monitor",
+      "fullDescription": "Lightweight website status page and connectivity monitor.",
+      "features": ["Uptime Monitoring", "Performance Metrics", "Status Page", "Connectivity Check"],
+      "link": "#",
+      "icon": "fa-heart-pulse"
+    },
+    {
+      "id": "mini-color",
+      "name": "Mini Color Lab",
+      "category": "webapp",
+      "status": "Live",
+      "description": "Password Manager",
+      "fullDescription": "Color-coded password management system with strong encryption.",
+      "features": ["AES Encryption", "Color Categories", "Password Gen"],
+      "link": "#",
+      "icon": "fa-key"
+    },
+    {
+      "id": "j-ip",
+      "name": "J IP",
+      "category": "webapp",
+      "status": "Live",
+      "description": "IP & Browser Info",
+      "fullDescription": "Shows IP address, browser info, ISP, OS, and location details.",
+      "features": ["IP Detection", "ISP Lookup", "OS Detection", "Geo-location"],
+      "link": "#",
+      "icon": "fa-location-dot"
+    },
+    {
+      "id": "edtech",
+      "name": "Ed-Tech Platform",
+      "category": "webapp",
+      "status": "Live",
+      "description": "Learning Management",
+      "fullDescription": "Comprehensive e-learning platform with course management and student tracking.",
+      "features": ["Course Mgmt", "Live Classes", "Progress Tracking"],
+      "link": "#",
+      "icon": "fa-graduation-cap"
+    },
+    {
+      "id": "pulse-api",
+      "name": "Kernel Pulse API",
+      "category": "api",
+      "status": "Live",
+      "description": "Monitoring API",
+      "fullDescription": "RESTful API for integrating website monitoring into applications.",
+      "features": ["REST API", "JSON Response", "High Availability"],
+      "link": "#",
+      "icon": "fa-plug"
+    },
+    {
+      "id": "j-ip-api",
+      "name": "J IP API",
+      "category": "api",
+      "status": "Live",
+      "description": "IP Info API",
+      "fullDescription": "API service providing detailed IP address information.",
+      "features": ["IP Lookup", "Geo Data", "ISP Info"],
+      "link": "#",
+      "icon": "fa-server"
+    },
+    {
+      "id": "kernel-vault",
+      "name": "Kernel Vault",
+      "category": "other",
+      "status": "Planned",
+      "description": "Secure Data Storage",
+      "fullDescription": "Planned: Advanced encrypted storage solution for sensitive data.",
+      "features": ["Encryption", "Zero-Knowledge", "Secure Sharing"],
+      "link": "#",
+      "icon": "fa-vault"
+    },
+    {
+      "id": "hawkin-ai",
+      "name": "Hawkin AI",
+      "category": "other",
+      "status": "Planned",
+      "description": "Video Summarizer",
+      "fullDescription": "User uploads any video link (Reel, YT), AI fetches content, uses STT for transcription, and LLM to provide a summary.",
+      "features": ["Link Fetching", "Speech-to-Text", "LLM Summary", "Multi-Platform"],
+      "link": "#",
+      "icon": "fa-video"
+    },
+    {
+      "id": "ai-micro-stories",
+      "name": "AI Micro Stories",
+      "category": "media",
+      "status": "Live",
+      "description": "AI Generated Content",
+      "fullDescription": "Platform for creating 8-second AI-generated videos and micro-stories for social media.",
+      "features": ["Story Gen", "Video Gen", "Social Ready"],
+      "link": "#",
+      "icon": "fa-film"
+    },
+    {
+      "id": "true-positive",
+      "name": "True-Positive",
+      "category": "media",
+      "status": "Beta",
+      "description": "Media Verification",
+      "fullDescription": "AI Media House product focused on content authenticity.",
+      "features": ["Fact Checking", "Source Verification", "AI Detection"],
+      "link": "#",
+      "icon": "fa-check-double"
+    },
+    {
+      "id": "quantum",
+      "name": "Quantum Products",
+      "category": "quantum",
+      "status": "Research",
+      "description": "Quantum Solutions",
+      "fullDescription": "Next-generation quantum computing algorithms and simulations.",
+      "features": ["Simulation", "Qubits", "Research"],
+      "link": "#",
+      "icon": "fa-atom"
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "category": "electronics",
+      "status": "Live",
+      "description": "Hardware & IoT",
+      "fullDescription": "IoT devices, embedded systems, and custom hardware solutions.",
+      "features": ["IoT", "Embedded Systems", "Sensors"],
+      "link": "#",
+      "icon": "fa-microchip"
+    }
+  ],
+  "resources": [
+    {
+      "id": "all-docs",
+      "name": "Product Documentation",
+      "category": "docs",
+      "status": "Available",
+      "description": "Docs of all Products",
+      "fullDescription": "Centralized documentation hub for Visio AI, Kernel Pulse, and all Jaiho products.",
+      "topics": ["Setup Guides", "API References", "Troubleshooting"],
+      "link": "#",
+      "icon": "fa-book"
+    },
+    {
+      "id": "learning",
+      "name": "Learning Resources",
+      "category": "learning",
+      "status": "Available",
+      "description": "Tutorials & Courses",
+      "fullDescription": "Educational materials to master our ecosystem and underlying technologies.",
+      "topics": ["Video Tutorials", "Code Labs", "Best Practices"],
+      "link": "#",
+      "icon": "fa-graduation-cap"
+    },
+    {
+      "id": "manuals",
+      "name": "Product Manuals",
+      "category": "manual",
+      "status": "Available",
+      "description": "User Manuals",
+      "fullDescription": "Detailed PDF manuals for end-users of all software and hardware products.",
+      "topics": ["User Guides", "Installation", "Maintenance"],
+      "link": "#",
+      "icon": "fa-file-lines"
+    },
+    {
+      "id": "whitepapers",
+      "name": "Whitepapers",
+      "category": "whitepaper",
+      "status": "Available",
+      "description": "Technical Papers",
+      "fullDescription": "In-depth technical papers on our AI architecture and security protocols.",
+      "topics": ["Architecture", "Security", "Innovation"],
+      "link": "#",
+      "icon": "fa-file-pdf"
+    },
+    {
+      "id": "research",
+      "name": "Research Papers",
+      "category": "research",
+      "status": "Available",
+      "description": "Scientific Publications",
+      "fullDescription": "Academic research and findings from Jaiho Labs.",
+      "topics": ["AI Research", "Quantum Studies", "Publications"],
+      "link": "#",
+      "icon": "fa-flask"
+    }
+  ]
+}

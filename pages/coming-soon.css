@@ -1,0 +1,113 @@
+:root {
+    --bg: #0F172A;
+    --text: #FFFFFF;
+    --text-muted: #94A3B8;
+    --font: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Theme Variations */
+.theme-labs { --primary: #9333EA; --accent: #A855F7; --bg-gradient: radial-gradient(circle at top right, #3B0764, #0F172A); }
+.theme-techserve { --primary: #2563EB; --accent: #60A5FA; --bg-gradient: radial-gradient(circle at top right, #1E3A8A, #0F172A); }
+.theme-kernel { --primary: #10B981; --accent: #34D399; --bg-gradient: radial-gradient(circle at top right, #064E3B, #0F172A); font-family: 'Courier New', monospace; }
+.theme-edge { --primary: #F59E0B; --accent: #FBBF24; --bg-gradient: radial-gradient(circle at top right, #78350F, #0F172A); }
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font); }
+
+body {
+    background: var(--bg);
+    background-image: var(--bg-gradient);
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* Floating Elements Animation */
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -1;
+}
+.shape-1 { width: 300px; height: 300px; background: var(--primary); top: -10%; left: -10%; animation: float 10s infinite alternate; }
+.shape-2 { width: 400px; height: 400px; background: var(--accent); bottom: -10%; right: -10%; animation: float 12s infinite alternate-reverse; }
+
+@keyframes float { from { transform: translate(0, 0); } to { transform: translate(30px, 50px); } }
+
+/* Content */
+.logo-area {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+}
+
+.main-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+/* Button */
+.back-btn {
+    text-decoration: none;
+    background: var(--primary);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.back-btn:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Add this to the Theme Variations section in coming-soon.css */
+.theme-digital { 
+    --primary: #F8FAFC; 
+    --accent: #94A3B8; 
+    --text-muted: #CBD5E1;
+    --bg-gradient: radial-gradient(circle at center, #334155, #020617); 
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .main-content h1 { font-size: 2.5rem; }
+}
