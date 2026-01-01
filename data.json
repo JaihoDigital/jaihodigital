@@ -126,10 +126,10 @@
       "name": "Dev Link",
       "category": "software",
       "status": "Live",
-      "description": "Developer Collaboration",
-      "fullDescription": "Platform connecting developers, facilitating code sharing, and project management.",
-      "features": ["Code Sharing", "Real-time Collaboration", "Project Management"],
-      "link": "#",
+      "description": "All-in-one productivity suite and developer toolkit",
+      "fullDescription": "Dev Link is a robust, all-in-one software suite built to streamline workflows for developers and power users. It unifies essential productivity apps—like spreadsheets, text editors, and schedulers—with professional technical tools, including an IP finder, reverse engineering utilities, and a toy HTML compiler. With integrated features for file sharing, messaging, and project tracking, Dev Link provides a centralized platform for creation, collaboration, and code management.",
+      "features": ["Productivity Suite", "Developer Toolkit", "Reverse Engineering", "File Sharing & Messaging", "Project Management", "Whiteboard & Sketch"],
+      "link": "https://github.com/avarshvir/Dev-Link-Software-for-Developers-and-Users",
       "icon": "fa-code-branch"
     },
     {
@@ -137,11 +137,11 @@
       "name": "Gita Py",
       "category": "software",
       "status": "Live",
-      "description": "Python Library",
-      "fullDescription": "A Python library providing easy access to Bhagavad Gita verses, translations, and commentaries.",
-      "features": ["Multiple Translations", "Search Functionality", "Verse Metadata", "Pip Installable"],
-      "link": "#",
-      "icon": "fa-book-open"
+      "description": "Python library for Bhagavad Gita verses and NLP datasets",
+      "fullDescription": "Gita Py is a specialized Python library designed to provide programmatic access to the Bhagavad Gita. It allows developers to easily retrieve verses, chapter summaries, and titles while offering robust validation tools. Beyond standard retrieval, Gita Py is structured to serve as a semantic and ethical dataset for AI applications, making it an ideal resource for spiritual NLP, topic modeling, sentiment analysis, and fine-tuning Large Language Models (LLMs) on philosophical texts.",
+      "features": ["Verse & Summary Retrieval", "Chapter Validation & Metadata", "Structured NLP Dataset", "LLM Fine-Tuning Ready", "Sentiment Analysis Support", "Python API"],
+      "link": "https://pypi.org/project/gita-py/",
+      "icon": "fas fa-book-open"
     },
     {
       "id": "pharmacy-sys",
@@ -181,21 +181,21 @@
       "name": "J Invoice Web",
       "category": "webapp",
       "status": "Live",
-      "description": "Smart Invoice Generation",
-      "fullDescription": "Modern web app for creating and tracking invoices with automated billing.",
-      "features": ["Templates", "PDF Export", "Payment Tracking"],
-      "link": "#",
-      "icon": "fa-file-invoice"
+      "description": "Professional web-based invoicing and billing platform",
+      "fullDescription": "J Invoice Web (Jaiho InvoiceGen) is a comprehensive, free web-based invoicing solution designed for speed and professionalism. It empowers businesses to generate customized invoices with advanced features like multi-currency support, flexible tax calculations (global, per-item, or common), and recurring billing. Users can fully personalize documents by uploading company logos and adding digital signatures, ensuring every PDF export looks polished and official.",
+      "features": ["Custom Invoice Generation", "Multi-Currency Support", "Advanced Tax Calculations", "Logo & Signature Integration", "PDF Export & Printing", "Client Management"],
+      "link": "https://jaiho-invoicegen.vercel.app/",
+      "icon": "fas fa-file-invoice-dollar"
     },
     {
       "id": "kernel-pulse",
       "name": "Kernel Pulse",
       "category": "webapp",
       "status": "Live",
-      "description": "Status Page & Monitor",
-      "fullDescription": "Lightweight website status page and connectivity monitor.",
-      "features": ["Uptime Monitoring", "Performance Metrics", "Status Page", "Connectivity Check"],
-      "link": "#",
+      "description": "Real-time service status page and connectivity monitor",
+      "fullDescription": "Kernel Pulse is a lightweight, serverless status page designed for real-time infrastructure visibility. It combines a browser-based dashboard with a secure serverless function to accurately check the reachability and response time of websites and APIs without CORS limitations. Configurable entirely via a single JSON file, it features auto-refresh monitoring, a 'Quick Probe' tool for ad-hoc URL testing, and a rate-limited public API for developers—all operating without databases or background tracking.",
+      "features": ["Real-time Connectivity Monitoring", "Serverless Architecture (Vercel)", "JSON-Based Configuration", "Quick Probe & Local History", "Public JSON API", "Auto-Refresh Dashboard"],
+      "link": "https://kernel-pulse.vercel.app",
       "icon": "fa-heart-pulse"
     },
     {
