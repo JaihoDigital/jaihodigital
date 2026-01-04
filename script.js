@@ -69,8 +69,22 @@ const words = [
     "Artificial Intelligence",
     "Quantum Computing",
     "Robotics",
+    "Software Development",
     "Computer Vision",
-    "Edge Computing"
+    "NLP Technologies",
+    "Edge Computing",
+    "Cloud Services",
+    "Cybersecurity",
+    "IoT Solutions",
+    "Embedded Systems",
+    "Digital Transformation",
+    "Marketing Outreach",
+    "Ecosystem Growth",
+    "Data Analytics",
+    "Machine Learning",
+    "Data Recovery",
+    "IT Services",
+    "AI Integration"
 ];
 
 let index = 0;
