@@ -236,10 +236,10 @@
       "name": "Kernel Pulse API",
       "category": "api",
       "status": "Live",
-      "description": "Monitoring API",
-      "fullDescription": "RESTful API for integrating website monitoring into applications.",
-      "features": ["REST API", "JSON Response", "High Availability"],
-      "link": "#",
+      "description": "Lightweight monitoring API for websites and services",
+      "fullDescription": "Kernel Pulse API is a RESTful API that allows developers to integrate real-time website, API, and service monitoring into their applications. Built on a serverless architecture, it provides accurate connectivity status and response times without the need for databases or background jobs. Ideal for lightweight dashboards, monitoring scripts, and quick service checks, the API returns JSON-formatted responses and is fully rate-limited for fair usage.",
+      "features": ["RESTful API with JSON response", "Real-time connectivity and response time checks", "Serverless architecture (Vercel)", "Lightweight integration for dashboards and scripts", "Rate-limited: 60 requests per minute", "No database or background monitoring required"],
+      "link": "https://kernel-pulse.vercel.app/docs.html",
       "icon": "fa-plug"
     },
     {
@@ -247,10 +247,10 @@
       "name": "J IP API",
       "category": "api",
       "status": "Live",
-      "description": "IP Info API",
-      "fullDescription": "API service providing detailed IP address information.",
-      "features": ["IP Lookup", "Geo Data", "ISP Info"],
-      "link": "#",
+      "description": "IP, geolocation, and browser information API",
+      "fullDescription": "J IP API is a free, no-authentication API that provides detailed information about IP addresses, geolocation, ISP, and client browser details. It is designed for developers to quickly retrieve accurate IP and location data in JSON format. Fully CORS-enabled and lightweight, it works seamlessly in web and backend applications for analytics, personalization, and monitoring purposes.",
+      "features": ["IP address lookup", "Geolocation (city, region, country, flag)", "ISP information", "Client browser and OS details", "No API key required", "CORS-enabled for web integration"],
+      "link": "https://jaiho-ip.vercel.app/api_docs.html",
       "icon": "fa-server"
     },
     {
