@@ -222,6 +222,10 @@ function renderGrid(filter, searchTerm = '') {
             <div class="meta">
                 <h3>${item.name}</h3>
                 <p>${item.description}</p>
+                <span class="developed-by dev-${item.category}">
+                Developed by ${item.developedBy}
+                </span>
+
             </div>
             <button class="launch-btn">View Details</button>
         `;

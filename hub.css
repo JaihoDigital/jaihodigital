@@ -397,6 +397,39 @@ body {
     gap: 1rem;
 }
 
+.developed-by {
+    font-size: 0.7rem;
+    margin-top: 6px;
+    display: inline-block;
+    font-weight: 700;
+}
+
+/* Category-based colors */
+.dev-ai,
+.dev-media {
+    color: var(--ai);
+}
+
+.dev-software {
+    color: var(--soft);
+}
+
+.dev-webapp,
+.dev-api,
+.dev-electronics {
+    color: var(--util);
+}
+
+.dev-quantum {
+    color: #7C3AED; /* quantum purple */
+}
+
+.dev-other {
+    color: var(--text-light);
+}
+
+
+
 .primary-btn {
     flex: 1;
     background: var(--primary);
