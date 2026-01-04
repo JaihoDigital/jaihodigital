@@ -58,6 +58,23 @@ body {
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-main); font-weight: 700; font-size: 1.2rem; }
 .logo-mark { width: 35px; height: 35px; background: var(--text-main); color: white; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
 
+/*.logo-mark {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.logo-mark img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}*/
+
+
 .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
 .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: 0.2s; font-size: 0.95rem; }
 .nav-links a:hover { color: var(--primary); }

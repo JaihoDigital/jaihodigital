@@ -74,7 +74,7 @@
       "description": "Hands-on lab for exploring computer vision and visual AI systems",
       "fullDescription": "CV Intelligent Lab is a practical environment for experimenting with computer vision techniques. Build and test models for image classification, object detection, face recognition, video analysis, and more. Ideal for prototyping and exploring visual AI applications in a unified workspace.",
       "features": ["Object Detection", "Face Recognition", "Image Classification", "Video Analysis", "Tracking & Motion Analysis", "Generative Vision Models", "Projects & Experiments"],
-      "link": "#",
+      "link": "pages/jaiho_labs_coming_soon.html",
       "icon": "fa-camera"
     },
     {
@@ -85,7 +85,7 @@
       "description": "Hands-on lab for building and experimenting with machine learning models",
       "fullDescription": "ML Intelligent Lab is a practical environment for designing, training, and evaluating machine learning models. Experiment with feature engineering, data preprocessing, supervised and unsupervised algorithms, cross-validation, ensemble methods, and model deployment in a unified workspace for real-world ML applications.",
       "features": ["Supervised & Unsupervised Learning", "Model Training", "Feature Engineering", "Cross-Validation", "Ensemble Methods", "Projects & Experiments"],
-      "link": "#",
+      "link": "pages/jaiho_labs_coming_soon.html",
       "icon": "fa-cogs"
     },
     {
@@ -151,7 +151,7 @@
       "description": "Inventory & Billing System",
       "fullDescription": "Comprehensive software handling inventory, prescriptions, billing, and customer management for pharmacies.",
       "features": ["Inventory Tracking", "Billing", "Customer DB", "Expiry Alerts"],
-      "link": "#",
+      "link": "pages/jaihotechserve_coming_soon.html",
       "icon": "fa-pills"
     },
     {
@@ -162,7 +162,7 @@
       "description": "Fitness Center System",
       "fullDescription": "All-in-one gym management solution for member tracking, attendance, and workout planning.",
       "features": ["Member Management", "Attendance", "Billing", "Workout Plans"],
-      "link": "#",
+      "link": "pages/jaihotechserve_coming_soon.html",
       "icon": "fa-dumbbell"
     },
     {
@@ -173,7 +173,7 @@
       "description": "Web Developer Platform",
       "fullDescription": "Browser-based version of Dev Link for seamless collaboration.",
       "features": ["Cloud-Based", "Real-time Sync", "No Installation"],
-      "link": "#",
+      "link": "https://devlink.streamlit.app/",
       "icon": "fa-globe"
     },
     {
@@ -206,7 +206,7 @@
       "description": "Password Manager",
       "fullDescription": "Color-coded password management system with strong encryption.",
       "features": ["AES Encryption", "Color Categories", "Password Gen"],
-      "link": "#",
+      "link": "https://jaiholabs.w3spaces.com/",
       "icon": "fa-key"
     },
     {
@@ -217,7 +217,7 @@
       "description": "IP & Browser Info",
       "fullDescription": "Shows IP address, browser info, ISP, OS, and location details.",
       "features": ["IP Detection", "ISP Lookup", "OS Detection", "Geo-location"],
-      "link": "#",
+      "link": "https://jaiho-ip.vercel.app/",
       "icon": "fa-location-dot"
     },
     {
@@ -228,7 +228,7 @@
       "description": "Learning Management",
       "fullDescription": "Comprehensive e-learning platform with course management and student tracking.",
       "features": ["Course Mgmt", "Live Classes", "Progress Tracking"],
-      "link": "#",
+      "link": "https://itsarc.w3spaces.com/itsarc2.html?fname=&lname=",
       "icon": "fa-graduation-cap"
     },
     {
@@ -261,7 +261,7 @@
       "description": "Secure Data Storage",
       "fullDescription": "Planned: Advanced encrypted storage solution for sensitive data.",
       "features": ["Encryption", "Zero-Knowledge", "Secure Sharing"],
-      "link": "#",
+      "link": "pages/jaiho_kernel_soon.html",
       "icon": "fa-vault"
     },
     {
@@ -280,33 +280,73 @@
       "name": "AI Micro Stories",
       "category": "media",
       "status": "Live",
-      "description": "AI Generated Content",
-      "fullDescription": "Platform for creating 8-second AI-generated videos and micro-stories for social media.",
-      "features": ["Story Gen", "Video Gen", "Social Ready"],
-      "link": "#",
+      "description": "Create 8-second cinematic AI-generated micro-stories",
+      "fullDescription": "AI Micro Stories is a creative platform that brings 8-second cinematic AI shorts to life. Each story is imagined, co-written, and visually rendered using AI tools like Flow, Sora, and Veo. Designed for social media, these micro-stories are perfect for Instagram Reels, YouTube Shorts, and Facebook videos, allowing creators to produce captivating content quickly with minimal effort.",
+      "features": ["8-second AI-generated cinematic stories", "Creative storytelling", "Visual rendering", "Optimized for Instagram Reels, YouTube, and Facebook", "Quick content creation with minimal effort", "Social media ready formats"],
+      "link": "https://aimicrostories.vercel.app/",
       "icon": "fa-film"
     },
     {
       "id": "true-positive",
-      "name": "True-Positive",
+      "name": "True Positive",
       "category": "media",
       "status": "Beta",
-      "description": "Media Verification",
-      "fullDescription": "AI Media House product focused on content authenticity.",
-      "features": ["Fact Checking", "Source Verification", "AI Detection"],
-      "link": "#",
+      "description": "Real-life stories and incidents turned into podcasts, movies and documentaries using AI + human creativity",
+      "fullDescription": "True Positive is a hybrid storytelling platform where real events and news are transformed into immersive podcasts and documentaries. Verified information is collected, scripts are crafted with creative insights and ideas, and AI models along with human collaboration, bring the stories to life. Each production blends real facts with imaginative storytelling, creating engaging content for YouTube, Instagram, Facebook, and beyond. The platform emphasizes authenticity, creativity, and multi-format storytelling, with videos that are already captivating audiences.",
+      "features": ["Hybrid AI + human storytelling", "Documentaries and podcasts from real events", "Creative scriptwriting and story development", "Enhanced by Notebook LM and other AI tools", "Content ready for YouTube, Instagram, Facebook, etc.", "Authentic, immersive, and engaging narratives"],
+      "link": "pages/jaiho_labs_coming_soon.html",
       "icon": "fa-check-double"
     },
     {
-      "id": "quantum",
-      "name": "Quantum Products",
+      "id": "quantum-sim",
+      "name": "Quantum Simulator",
       "category": "quantum",
       "status": "Research",
-      "description": "Quantum Solutions",
-      "fullDescription": "Next-generation quantum computing algorithms and simulations.",
-      "features": ["Simulation", "Qubits", "Research"],
-      "link": "#",
+      "description": "Simulate quantum circuits and algorithms on classical hardware",
+      "fullDescription": "Quantum Simulator allows researchers and students to experiment with quantum circuits, qubits, and quantum algorithms without needing a real quantum computer. It supports multi-qubit simulations, gate operations, and visualization of quantum states, providing a hands-on way to learn and prototype quantum computing concepts.",
+      "features": [
+        "Simulate multi-qubit circuits",
+        "Quantum gate operations",
+        "Visualize quantum states & entanglement",
+        "Algorithm prototyping",
+        "Educational and research use"
+      ],
+      "link": "pages/jaiho_labs_coming_soon.html",
       "icon": "fa-atom"
+    },
+    {
+      "id": "quantum-api",
+      "name": "Quantum Research API",
+      "category": "quantum",
+      "status": "Research",
+      "description": "Access quantum algorithms and simulations programmatically",
+      "fullDescription": "Quantum Research API provides developers and researchers with programmatic access to quantum algorithms, simulations, and quantum-inspired optimization routines. Ideal for integrating quantum experiments into software, testing algorithms, and exploring hybrid quantum-classical approaches.",
+      "features": [
+        "Programmatic access to quantum simulations",
+        "Quantum-inspired optimization routines",
+        "Supports Python and JavaScript",
+        "Hybrid quantum-classical experimentation",
+        "Integration with research workflows"
+      ],
+      "link": "pages/jaiho_labs_coming_soon.html",
+      "icon": "fa-plug"
+    },
+    {
+      "id": "quantum-visualizer",
+      "name": "Quantum Visualizer",
+      "category": "quantum",
+      "status": "Research",
+      "description": "Interactive 3D visualizations of quantum states and entanglement",
+      "fullDescription": "Quantum Visualizer is a research tool that provides interactive 3D visualizations of quantum states, entanglement, and circuit dynamics. It helps students and researchers intuitively understand quantum phenomena and track the evolution of quantum algorithms in real time.",
+      "features": [
+        "3D visualization of quantum states",
+        "Track qubit entanglement & superposition",
+        "Interactive quantum circuit exploration",
+        "Supports educational and research purposes",
+        "Real-time quantum simulation rendering"
+      ],
+      "link": "pages/jaiho_labs_coming_soon.html",
+      "icon": "fa-project-diagram"
     },
     {
       "id": "electronics",
@@ -316,7 +356,7 @@
       "description": "Hardware & IoT",
       "fullDescription": "IoT devices, embedded systems, and custom hardware solutions.",
       "features": ["IoT", "Embedded Systems", "Sensors"],
-      "link": "#",
+      "link": "pages/jaiho_edge_soon.html",
       "icon": "fa-microchip"
     }
   ],
