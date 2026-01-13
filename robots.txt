@@ -1,0 +1,15 @@
+# Robots.txt for Jaiho Digital
+# https://jaiho-digital.onrender.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jaiho-digital.onrender.com/sitemap.xml
+
+# Crawl delay (optional, be kind to servers)
+Crawl-delay: 1
+
+# Disallow admin or private paths (if any exist in future)
+# Disallow: /admin/
+# Disallow: /private/
