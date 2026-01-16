@@ -6,12 +6,37 @@
 }
 
 /* Theme Variations */
-.theme-labs { --primary: #9333EA; --accent: #A855F7; --bg-gradient: radial-gradient(circle at top right, #3B0764, #0F172A); }
-.theme-techserve { --primary: #2563EB; --accent: #60A5FA; --bg-gradient: radial-gradient(circle at top right, #1E3A8A, #0F172A); }
-.theme-kernel { --primary: #10B981; --accent: #34D399; --bg-gradient: radial-gradient(circle at top right, #064E3B, #0F172A); font-family: 'Courier New', monospace; }
-.theme-edge { --primary: #F59E0B; --accent: #FBBF24; --bg-gradient: radial-gradient(circle at top right, #78350F, #0F172A); }
+.theme-labs {
+    --primary: #9333EA;
+    --accent: #A855F7;
+    --bg-gradient: radial-gradient(circle at top right, #3B0764, #0F172A);
+}
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font); }
+.theme-techserve {
+    --primary: #2563EB;
+    --accent: #60A5FA;
+    --bg-gradient: radial-gradient(circle at top right, #1E3A8A, #0F172A);
+}
+
+.theme-kernel {
+    --primary: #10B981;
+    --accent: #34D399;
+    --bg-gradient: radial-gradient(circle at top right, #064E3B, #0F172A);
+    font-family: 'Courier New', monospace;
+}
+
+.theme-edge {
+    --primary: #F59E0B;
+    --accent: #FBBF24;
+    --bg-gradient: radial-gradient(circle at top right, #78350F, #0F172A);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
 
 body {
     background: var(--bg);
@@ -35,10 +60,34 @@ body {
     opacity: 0.4;
     z-index: -1;
 }
-.shape-1 { width: 300px; height: 300px; background: var(--primary); top: -10%; left: -10%; animation: float 10s infinite alternate; }
-.shape-2 { width: 400px; height: 400px; background: var(--accent); bottom: -10%; right: -10%; animation: float 12s infinite alternate-reverse; }
 
-@keyframes float { from { transform: translate(0, 0); } to { transform: translate(30px, 50px); } }
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--primary);
+    top: -10%;
+    left: -10%;
+    animation: float 10s infinite alternate;
+}
+
+.shape-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent);
+    bottom: -10%;
+    right: -10%;
+    animation: float 12s infinite alternate-reverse;
+}
+
+@keyframes float {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(30px, 50px);
+    }
+}
 
 /* Content */
 .logo-area {
@@ -90,24 +139,26 @@ body {
     border-radius: 12px;
     font-weight: 600;
     transition: 0.3s;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .back-btn:hover {
     background: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Add this to the Theme Variations section in coming-soon.css */
-.theme-digital { 
-    --primary: #F8FAFC; 
-    --accent: #94A3B8; 
-    --text-muted: #CBD5E1;
-    --bg-gradient: radial-gradient(circle at center, #334155, #020617); 
+.theme-digital {
+    --primary: #E65100;
+    --accent: #F57C00;
+    --text-muted: #FFB74D;
+    --bg-gradient: radial-gradient(circle at center, #BF360C, #1A0A00);
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    .main-content h1 { font-size: 2.5rem; }
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
 }
