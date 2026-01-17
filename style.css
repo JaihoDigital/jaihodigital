@@ -95,10 +95,9 @@ body {
 }
 
 .logo-mark {
-    width: 35px;
-    height: 35px;
-    background: var(--text-main);
-    color: white;
+    width: 48px;
+    height: 48px;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
