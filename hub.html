@@ -6,111 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Hub | Jaiho Ecosystem</title>
     <meta name="description"
-        content="Explore Jaiho Digital's products, platforms, and knowledge. AI tools, software, APIs, and resources powering the Jaiho ecosystem.">
-    <meta name="keywords" content="Jaiho Digital, Hub, Products, AI, Software, APIs, Fission AI, Visio AI, Jaiho Pulse">
-    <meta name="author" content="Jaiho Digital">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://jaiho-digital.onrender.com/hub.html">
+        content="The central intelligence hub for Jaiho Digital. Access AI models, developer tools, software platforms, and research resources.">
+    <link rel="icon" type="image/x-icon" href="logo.png">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jaiho-digital.onrender.com/hub.html">
-    <meta property="og:title" content="The Hub | Jaiho Digital Ecosystem">
-    <meta property="og:description"
-        content="Explore Jaiho Digital's products, platforms, and knowledge powering the ecosystem.">
-    <meta property="og:image" content="https://jaiho-digital.onrender.com/logo.png">
-    <meta property="og:site_name" content="Jaiho Digital">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://jaiho-digital.onrender.com/hub.html">
-    <meta name="twitter:title" content="The Hub | Jaiho Digital Ecosystem">
-    <meta name="twitter:description"
-        content="Explore Jaiho Digital's products, platforms, and knowledge powering the ecosystem.">
-    <meta name="twitter:image" content="https://jaiho-digital.onrender.com/logo.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="hub.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="hub.css">
 </head>
 
 <body>
+    <div class="noise-overlay"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
 
-    <div class="layout">
 
+
+    <div class="app-container">
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="brand">
-                    <i class="fas fa-th"></i>
-                    <span>The Hub</span>
+                    <img src="logo.png" alt="Jaiho Logo" class="brand-logo">
+                    <div class="brand-text">
+                        <span>Jaiho</span>
+                        <span class="highlight">Hub</span>
+                    </div>
                 </div>
                 <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
             </div>
 
-            <div class="nav-group">
-                <div class="nav-label">Products</div>
-                <button class="nav-item active" data-filter="all" data-type="product">
-                    <i class="fas fa-border-all"></i> All Products
-                </button>
-                <button class="nav-item" data-filter="ai" data-type="product">
-                    <i class="fas fa-brain"></i> AI & Labs
-                </button>
-                <button class="nav-item" data-filter="software" data-type="product">
-                    <i class="fas fa-code"></i> Software
-                </button>
-                <button class="nav-item" data-filter="webapp" data-type="product">
-                    <i class="fas fa-globe"></i> Web Apps
-                </button>
-                <button class="nav-item" data-filter="api" data-type="product">
-                    <i class="fas fa-plug"></i> APIs
-                </button>
-                <button class="nav-item" data-filter="media" data-type="product">
-                    <i class="fas fa-photo-film"></i> AI Media
-                </button>
-                <button class="nav-item" data-filter="electronics" data-type="product">
-                    <i class="fas fa-microchip"></i> Electronics
-                </button>
-                <button class="nav-item" data-filter="quantum" data-type="product">
-                    <i class="fas fa-atom"></i> Quantum
-                </button>
-                <button class="nav-item" data-filter="other" data-type="product">
-                    <i class="fas fa-layer-group"></i> Other
-                </button>
+            <div class="nav-scroll">
+
+                <div class="nav-category">Ecosystem</div>
+                <nav class="nav-menu">
+                    <button class="nav-item active" data-filter="all" data-type="product">
+                        <i class="fas fa-grid-2"></i> <span>All Products</span>
+                    </button>
+                    <button class="nav-item" data-filter="ai" data-type="product">
+                        <i class="fas fa-brain"></i> <span>AI & Intelligence</span>
+                    </button>
+                    <button class="nav-item" data-filter="software" data-type="product">
+                        <i class="fas fa-laptop-code"></i> <span>Software Suite</span>
+                    </button>
+                    <button class="nav-item" data-filter="webapp" data-type="product">
+                        <i class="fas fa-globe"></i> <span>Web Apps</span>
+                    </button>
+                    <button class="nav-item" data-filter="api" data-type="product">
+                        <i class="fas fa-plug"></i> <span>APIs & SDKs</span>
+                    </button>
+                    <button class="nav-item" data-filter="media" data-type="product">
+                        <i class="fas fa-photo-film"></i> <span>Media & GenAI</span>
+                    </button>
+                    <button class="nav-item" data-filter="quantum" data-type="product">
+                        <i class="fas fa-atom"></i> <span>Quantum R&D</span>
+                    </button>
+                    <button class="nav-item" data-filter="electronics" data-type="product">
+                        <i class="fas fa-microchip"></i> <span>Edge & IoT</span>
+                    </button>
+                </nav>
+
+                <div class="nav-category">Knowledge Base</div>
+                <nav class="nav-menu">
+                    <button class="nav-item resource" data-filter="docs" data-type="resource">
+                        <i class="fas fa-book"></i> <span>Documentation</span>
+                    </button>
+                    <button class="nav-item resource" data-filter="learning" data-type="resource">
+                        <i class="fas fa-graduation-cap"></i> <span>Learning</span>
+                    </button>
+                    <button class="nav-item resource" data-filter="manual" data-type="resource">
+                        <i class="fas fa-file-lines"></i> <span>User Manuals</span>
+                    </button>
+                    <button class="nav-item resource" data-filter="research" data-type="resource">
+                        <i class="fas fa-flask"></i> <span>Research Papers</span>
+                    </button>
+                    <button class="nav-item resource" data-filter="whitepaper" data-type="resource">
+                        <i class="fas fa-file-pdf"></i> <span>Whitepapers</span>
+                    </button>
+                </nav>
+
+                <div class="nav-card">
+                    <div class="nav-card-icon"><i class="fab fa-github"></i></div>
+                    <h4>Contribute</h4>
+                    <p>Help build the AGI infrastructure of tomorrow.</p>
+                    <a href="https://github.com/jaihodigital" target="_blank" class="nav-card-btn">View Repositories</a>
+                </div>
             </div>
 
-            <div class="nav-group">
-                <div class="nav-label">Resources</div>
-                <button class="nav-item resource" data-filter="docs" data-type="resource">
-                    <i class="fas fa-book"></i> Documentation
-                </button>
-                <button class="nav-item resource" data-filter="learning" data-type="resource">
-                    <i class="fas fa-graduation-cap"></i> Learning
-                </button>
-                <button class="nav-item resource" data-filter="manual" data-type="resource">
-                    <i class="fas fa-file-lines"></i> Manuals
-                </button>
-                <button class="nav-item resource" data-filter="research" data-type="resource">
-                    <i class="fas fa-flask"></i> Research Papers
-                </button>
-                <button class="nav-item resource" data-filter="whitepaper" data-type="resource">
-                    <i class="fas fa-file-pdf"></i> Whitepapers
-                </button>
-            </div>
-
-            <div class="nav-group mt-auto">
-                <a href="index.html" class="nav-item back-btn">
-                    <i class="fas fa-arrow-left"></i> Back to Corporate
+            <div class="sidebar-footer">
+                <a href="index.html" class="user-profile">
+                    <div class="user-avatar"><i class="fas fa-arrow-left"></i></div>
+                    <div class="user-info">
+                        <span class="name">Return Home</span>
+                        <span class="role">Jaiho Digital</span>
+                    </div>
                 </a>
             </div>
         </aside>
 
         <main class="main-view">
+
             <header class="topbar">
                 <button class="menu-toggle" id="menuToggle">
                     <i class="fas fa-bars"></i>
@@ -118,18 +119,51 @@
 
                 <div class="search-wrapper">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="searchInput" placeholder="Search...">
+                    <input type="text" id="searchInput" placeholder="Search ecosystem (Ctrl + K)...">
+                </div>
+
+                <div class="header-actions">
+                    <a href="https://github.com/jaihodigital" target="_blank" class="github-btn">
+                        <i class="fab fa-github"></i> <span>Open Source</span>
+                    </a>
                 </div>
             </header>
 
             <div class="content-body">
-                <div class="grid-header">
-                    <h1 id="sectionTitle">Jaiho Ecosystem</h1>
-                    <p>Products, platforms, and knowledge powering Jaiho Digital.</p>
+
+                <section class="featured-carousel" id="featuredCarousel">
+                    <div class="featured-track" id="featuredTrack">
+                    </div>
+
+                    <div class="carousel-controls">
+                        <button class="c-btn prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                        <div class="c-dots" id="carouselDots"></div>
+                        <button class="c-btn next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </section>
+
+                <div class="grid-controls">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-sort="newest">Newest</button>
+                        <button class="tab-btn" data-sort="alpha">A-Z</button>
+                        <button class="tab-btn" data-sort="popular">Popular</button>
+                    </div>
+                    <div class="view-meta">
+                        <span id="sectionTitle">All Products</span>
+                        <span class="divider">/</span>
+                        <span id="resultCount" class="count">Loading...</span>
+                    </div>
                 </div>
 
                 <div class="app-grid" id="appGrid">
+                    <div class="loading-state">
+                        <i class="fas fa-circle-notch fa-spin"></i> Initializing Neural Core...
+                    </div>
                 </div>
+
+                <footer class="hub-footer">
+                    <p>&copy; 2026 Jaiho Digital. All systems operational.</p>
+                </footer>
             </div>
         </main>
     </div>
@@ -138,191 +172,47 @@
         <div class="modal-content">
             <button class="close-modal" id="closeModal"><i class="fas fa-times"></i></button>
 
-            <div class="modal-header">
-                <div class="modal-icon" id="modalIcon"></div>
-                <div class="modal-title-group">
-                    <h2 id="modalTitle">Product Name</h2>
+            <div class="modal-hero">
+                <div class="modal-icon-lg" id="modalIcon"></div>
+                <div class="modal-header-text">
                     <div class="modal-badges">
-                        <span class="modal-category" id="modalCategory">Category</span>
-                        <span class="status-badge" id="modalStatus">Live</span>
+                        <span class="modal-dev" id="modalDev">Jaiho Labs</span>
+                        <span class="modal-status" id="modalStatus">Live</span>
                     </div>
+                    <h2 id="modalTitle">Product Name</h2>
+                    <p class="modal-tagline" id="modalTagline">Short description goes here.</p>
                 </div>
             </div>
 
-            <div class="modal-body">
-                <p id="modalDesc" class="modal-description"></p>
+            <div class="modal-body-grid">
+                <div class="modal-main">
+                    <h3>Overview</h3>
+                    <p id="modalDesc">Full description text...</p>
 
-                <div class="modal-features">
-                    <h4>Key Features</h4>
-                    <ul id="modalFeatures">
-                    </ul>
+                    <h3>Capabilities</h3>
+                    <ul class="feature-list" id="modalFeatures"></ul>
                 </div>
-            </div>
 
-            <div class="modal-footer">
-                <a href="#" id="modalLink" target="_blank" class="primary-btn">Launch Product</a>
-                <button class="secondary-btn"
-                    onclick="document.getElementById('productModal').classList.remove('active')">Close</button>
+                <div class="modal-sidebar">
+                    <div class="info-block">
+                        <label>Version</label>
+                        <span class="info-value mono" id="modalVersion">v1.0.0</span>
+                    </div>
+
+                    <div class="info-block">
+                        <label>Tech Stack</label>
+                        <div class="tech-stack-list" id="modalStack"></div>
+                    </div>
+
+                    <a href="#" target="_blank" id="modalLink" class="action-btn">
+                        Launch Application <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        // State
-        let allData = { products: [], resources: [] };
-
-        // DOM Elements
-        const grid = document.getElementById('appGrid');
-        const searchInput = document.getElementById('searchInput');
-        const navButtons = document.querySelectorAll('.nav-item[data-filter]');
-        const modal = document.getElementById('productModal');
-        const closeModalBtn = document.getElementById('closeModal');
-
-        // Mobile Menu Elements
-        const menuToggle = document.getElementById('menuToggle');
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebarOverlay');
-        const closeSidebarBtn = document.getElementById('closeSidebar');
-
-        // Toggle Mobile Sidebar
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.add('active');
-            overlay.classList.add('active');
-        });
-
-        // Close Sidebar Logic
-        function closeSidebar() {
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
-        }
-        closeSidebarBtn.addEventListener('click', closeSidebar);
-        overlay.addEventListener('click', closeSidebar);
-
-        // Fetch Data
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                allData = data;
-                renderGrid('all');
-            })
-            .catch(err => console.error('Error loading data:', err));
-
-        // Render Function
-        function renderGrid(filter, searchTerm = '') {
-            grid.innerHTML = '';
-            const term = searchTerm.toLowerCase();
-
-            const activeBtn = document.querySelector('.nav-item.active');
-            const type = activeBtn ? activeBtn.dataset.type : 'product';
-
-            let itemsToRender = type === 'product' ? allData.products : allData.resources;
-
-            if (filter !== 'all') {
-                itemsToRender = itemsToRender.filter(item => item.category === filter);
-            }
-
-            if (term) {
-                const combined = [...allData.products, ...allData.resources];
-                itemsToRender = combined.filter(item =>
-                    item.name.toLowerCase().includes(term) ||
-                    item.description.toLowerCase().includes(term)
-                );
-            }
-
-            // Helper to clean status text for CSS class (e.g., "In Development" -> "in-development")
-            const getStatusClass = (status) => status ? status.toLowerCase().replace(/ /g, '-') : 'live';
-
-            itemsToRender.forEach(item => {
-                const card = document.createElement('div');
-                const isResource = allData.resources.some(r => r.id === item.id);
-                const statusClass = getStatusClass(item.status);
-
-                card.className = isResource ? 'resource-card' : 'app-card';
-                card.onclick = () => openModal(item);
-
-                const iconClass = isResource ? 'resource-icon' : `icon-box ${getIconColorClass(item.category)}`;
-
-                card.innerHTML = `
-            <div class="card-top">
-                <div class="${iconClass}">
-                    <i class="fas ${item.icon}"></i>
-                </div>
-                ${!isResource ? `<span class="status-pill ${statusClass}">${item.status}</span>` : ''}
-            </div>
-            <div class="meta">
-                <h3>${item.name}</h3>
-                <p>${item.description}</p>
-                <span class="developed-by dev-${item.category}">
-                Developed by ${item.developedBy}
-                </span>
-
-            </div>
-            <button class="launch-btn">View Details</button>
-        `;
-                grid.appendChild(card);
-            });
-        }
-
-        function getIconColorClass(cat) {
-            if (['ai', 'quantum'].includes(cat)) return 'ai';
-            if (['webapp', 'api', 'electronics'].includes(cat)) return 'util';
-            if (['software', 'media'].includes(cat)) return 'soft';
-            return 'ai';
-        }
-
-        // Filter Logic
-        navButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                navButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                renderGrid(btn.dataset.filter, searchInput.value);
-                // Close sidebar on mobile after selection
-                if (window.innerWidth <= 768) closeSidebar();
-            });
-        });
-
-        searchInput.addEventListener('input', (e) => {
-            const activeFilter = document.querySelector('.nav-item.active')?.dataset.filter || 'all';
-            renderGrid(activeFilter, e.target.value);
-        });
-
-        // Modal Logic
-        function openModal(item) {
-            document.getElementById('modalTitle').innerText = item.name;
-            document.getElementById('modalCategory').innerText = item.category.toUpperCase();
-            document.getElementById('modalDesc').innerText = item.fullDescription;
-            document.getElementById('modalLink').href = item.link;
-
-            // Set Status
-            const statusBadge = document.getElementById('modalStatus');
-            statusBadge.innerText = item.status;
-            statusBadge.className = `status-badge ${item.status.toLowerCase().replace(/ /g, '-')}`;
-
-            // Icon
-            const iconContainer = document.getElementById('modalIcon');
-            iconContainer.className = `modal-icon ${getIconColorClass(item.category)}`;
-            iconContainer.innerHTML = `<i class="fas ${item.icon}"></i>`;
-
-            // Features List
-            const featureList = document.getElementById('modalFeatures');
-            featureList.innerHTML = '';
-            const listItems = item.features || item.topics || [];
-
-            listItems.forEach(feat => {
-                const li = document.createElement('li');
-                li.innerText = feat;
-                featureList.appendChild(li);
-            });
-
-            modal.classList.add('active');
-        }
-
-        closeModalBtn.addEventListener('click', () => modal.classList.remove('active'));
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.classList.remove('active');
-        });
-    </script>
-
+    <script src="hub.js"></script>
 </body>
 
 </html>
