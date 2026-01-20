@@ -6,28 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Policy | Jaiho Digital</title>
     <meta name="description"
-        content="Jaiho Digital Cookie Policy - Learn how we use cookies and similar technologies on our website.">
-    <meta name="keywords" content="Jaiho Digital, cookies, cookie policy, privacy, tracking">
-    <meta name="author" content="Jaiho Digital">
-    <meta name="robots" content="index, follow">
+        content="Jaiho Digital Cookie Policy - Transparency regarding Cookies, Local Storage, and Session Data.">
     <link rel="canonical" href="https://jaiho-digital.onrender.com/cookies.html">
+    <link rel="icon" href="/assets/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jaiho-digital.onrender.com/cookies.html">
-    <meta property="og:title" content="Cookie Policy | Jaiho Digital">
-    <meta property="og:description" content="Learn how Jaiho Digital uses cookies and similar tracking technologies.">
-    <meta property="og:image" content="https://jaiho-digital.onrender.com/logo.png">
-    <meta property="og:site_name" content="Jaiho Digital">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://jaiho-digital.onrender.com/cookies.html">
-    <meta name="twitter:title" content="Cookie Policy | Jaiho Digital">
-    <meta name="twitter:description" content="Learn how Jaiho Digital uses cookies and similar tracking technologies.">
-    <meta name="twitter:image" content="https://jaiho-digital.onrender.com/logo.png">
-
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- PWA / Android -->
+    <link rel="manifest" href="/assets/site.webmanifest">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
@@ -47,17 +37,22 @@
         }
 
         .legal-content .last-updated {
-            color: var(--text-muted);
+            color: var(--accent);
             margin-bottom: 2rem;
             font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .legal-content h2 {
-            font-size: 1.3rem;
-            margin-top: 2.5rem;
+            font-size: 1.4rem;
+            margin-top: 3rem;
             margin-bottom: 1rem;
             color: var(--text-main);
-            font-weight: 600;
+            font-weight: 700;
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
         }
 
         .legal-content p,
@@ -69,6 +64,7 @@
 
         .legal-content ul {
             padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .legal-content ul li {
@@ -95,36 +91,61 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: var(--bg-body);
+            background: rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
             font-size: 2rem;
             color: var(--primary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* Glass Table Styles */
         .cookie-table {
             width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.02);
         }
 
         .cookie-table th,
         .cookie-table td {
-            padding: 12px 16px;
+            padding: 16px;
             text-align: left;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .cookie-table th {
-            background: var(--bg-body);
+            background: rgba(255, 255, 255, 0.05);
             font-weight: 600;
-            color: var(--text-main);
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
 
         .cookie-table td {
             color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .cookie-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: #fff;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -134,11 +155,11 @@
     <div class="noise-overlay"></div>
 
     <nav class="glass-nav">
-        <div class="container nav-flex">
+        <div class="container nav-content">
             <a href="index.html" class="logo">
-                <div class="logo-mark">
+                <div class="logo-mark" style="background: transparent;">
                     <img src="logo.png" alt="Jaiho Digital Logo"
-                        style="width: 100%; height: 100%; object-fit: contain;">
+                        style="width: 35px; height: 35px; object-fit: contain;">
                 </div>
                 <span>Jaiho Digital</span>
             </a>
@@ -159,116 +180,102 @@
                 <i class="fas fa-cookie-bite"></i>
             </div>
             <h1>Cookie Policy</h1>
-            <p>How we use cookies and similar technologies</p>
+            <p>Digital Footprints, Local Storage & Transparency</p>
         </div>
     </section>
 
     <section class="legal-content">
-        <p class="last-updated">Last Updated: January 13, 2026</p>
+        <p class="last-updated">Last Updated: January 20, 2026</p>
 
-        <h2>1. What Are Cookies?</h2>
-        <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They
-            are widely used to make websites work more efficiently and provide information to website owners. Cookies
-            help us enhance your browsing experience and improve our services.</p>
+        <h2>1. The "Minimalist" Philosophy</h2>
+        <p>At Jaiho Digital, we believe in keeping software lightweight—and that applies to our tracking too. We do not use aggressive advertising cookies or sell your browsing history. We use data storage technologies strictly to make our applications function correctly.</p>
 
-        <h2>2. How We Use Cookies</h2>
-        <p>Jaiho Digital uses cookies for the following purposes:</p>
+        <h2>2. Cookies vs. Local Storage</h2>
+        <p>Modern web applications function differently than old websites. We use two types of storage:</p>
         <ul>
-            <li><strong>Essential Cookies:</strong> Required for the website to function properly. These cannot be
-                disabled.</li>
-            <li><strong>Performance Cookies:</strong> Help us understand how visitors interact with our website by
-                collecting anonymous information.</li>
-            <li><strong>Functionality Cookies:</strong> Remember your preferences and settings to enhance your
-                experience.</li>
-            <li><strong>Analytics Cookies:</strong> Allow us to measure and analyze website traffic to improve our
-                content and services.</li>
+            <li><strong>Cookies:</strong> Small files sent to your browser from our server. Used primarily for "Sessions" (keeping you logged in).</li>
+            <li><strong>Local Storage:</strong> A database inside your browser. Apps like <strong>Kernel Pulse</strong> and <strong>Jaiho IP</strong> use this to save your preferences (like "Dark Mode" or "Probe History") directly on your device without sending it to our servers.</li>
         </ul>
 
-        <h2>3. Types of Cookies We Use</h2>
+        <h2>3. Categorization of Data</h2>
         <table class="cookie-table">
             <thead>
                 <tr>
-                    <th>Cookie Type</th>
+                    <th>Category</th>
+                    <!--<th>Tech Stack</th>-->
                     <th>Purpose</th>
-                    <th>Duration</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Session Cookies</td>
-                    <td>Essential for website navigation and functionality</td>
-                    <td>Session</td>
+                    <td><strong>Essential</strong></td>
+                    <!--<td><span class="tech-badge">Streamlit</span> <span class="tech-badge">Vercel</span></td>-->
+                    <td>Required for <strong>Visio AI</strong> and <strong>Dev Link</strong> to run. These manage user sessions and prevent the app from crashing.</td>
                 </tr>
                 <tr>
-                    <td>Preference Cookies</td>
-                    <td>Remember your settings and preferences</td>
-                    <td>1 Year</td>
+                    <td><strong>Functional</strong></td>
+                    <!--<td><span class="tech-badge">LocalStorage</span></td>-->
+                    <td>Used by <strong>Kernel Pulse</strong> to save your last scanned IP or API settings locally on your machine.</td>
                 </tr>
                 <tr>
-                    <td>Analytics Cookies</td>
-                    <td>Collect anonymous usage statistics</td>
-                    <td>2 Years</td>
+                    <td><strong>Analytics</strong></td>
+                    <!--<td><span class="tech-badge">Cloudflare</span> <span class="tech-badge">Render</span></td>-->
+                    <td>Anonymous metrics (e.g., "50 visitors from India") to help us optimize server load. We do not track individual identities.</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2>4. Third-Party Cookies</h2>
-        <p>Some cookies may be placed by third-party services that appear on our pages. We use the following third-party
-            services:</p>
+        <h2>4. Third-Party Integrations</h2>
+        <p>Our ecosystem connects several powerful platforms. When you use specific tools, these providers may set their own cookies:</p>
         <ul>
-            <li><strong>Font Services:</strong> Google Fonts for typography</li>
-            <li><strong>Icon Libraries:</strong> Font Awesome for iconography</li>
-            <li><strong>Analytics:</strong> Anonymous usage tracking to improve our services</li>
+            <li><strong>Hugging Face Spaces:</strong> When using Radiant AI or NGIBS, Hugging Face manages the authentication cookies.</li>
+            <li><strong>Streamlit Community Cloud:</strong> Hosting for our data apps requires functional cookies for performance.</li>
+            <li><strong>GitHub:</strong> If you use "Login with GitHub" for any future Dev tools.</li>
         </ul>
 
-        <h2>5. Managing Cookies</h2>
-        <p>You can control and manage cookies in various ways:</p>
+        <h2>5. Managing Your Preferences</h2>
+        <p>Since we respect your autonomy, you have full control:</p>
         <ul>
-            <li><strong>Browser Settings:</strong> Most browsers allow you to refuse or accept cookies through their
-                settings menu.</li>
-            <li><strong>Delete Cookies:</strong> You can delete cookies that have already been set through your browser
-                settings.</li>
-            <li><strong>Private Browsing:</strong> Use your browser's private/incognito mode to prevent cookies from
-                being stored.</li>
+            <li><strong>Browser Settings:</strong> You can block all cookies via Chrome/Firefox/Safari settings. <em>Note: This may break the login features of Visio AI.</em></li>
+            <li><strong>Clear Local Storage:</strong> You can wipe the memory of Kernel Pulse by clearing your browser's cache.</li>
+            <li><strong>Incognito Mode:</strong> Forces all cookies to be deleted immediately upon closing the window.</li>
         </ul>
-        <p>Please note that disabling cookies may affect the functionality of our website and limit your user
-            experience.</p>
 
-        <h2>6. Updates to This Policy</h2>
-        <p>We may update this Cookie Policy from time to time to reflect changes in our practices or for legal reasons.
-            We encourage you to review this policy periodically for the latest information.</p>
+        <h2>6. Updates</h2>
+        <p>We may update this policy as we deploy new "Intelligent Labs" modules. Check back here for the latest protocols.</p>
 
-        <h2>7. Contact Us</h2>
-        <p>If you have questions about our use of cookies, please contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:jaihodigital@gmail.com">jaihodigital@gmail.com</a></p>
+        <h2>7. Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:jaihodigital@gmail.com" style="color: var(--accent); text-decoration: none;">jaihodigital@gmail.com</a></p>
     </section>
 
     <footer class="footer-new">
         <div class="container">
+            <!-- Top Footer Section -->
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="logo.png" alt="Jaiho Digital" style="width: 32px; height: 32px; object-fit: contain;">
+                        <img src="logo.png" alt="Jaiho Digital" style="width: 45px; height: 45px; object-fit: contain;">
                         <span>Jaiho Digital</span>
                     </div>
                     <p class="footer-tagline">Tech For Earth, Tech For All.</p>
                     <p class="footer-desc">Building the future through AI, Quantum Computing, IoT, and sustainable
                         technology solutions.</p>
                     <div class="socials-container">
-                        <a href="https://github.com/jaihodigital" class="social-icon github" aria-label="GitHub"><i
+                        <a href="https://github.com/jaihodigital" class="social-icon github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i
                                 class="fab fa-github"></i></a>
                         <a href="https://huggingface.co/jaihodigital" class="social-icon huggingface"
-                            aria-label="HuggingFace"><i class="fas fa-brain"></i></a>
+                            aria-label="HuggingFace" target="_blank" rel="noopener noreferrer"><i class="fas fa-brain"></i></a>
                         <a href="https://instagram.com/jaihodigital" class="social-icon instagram"
-                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/people/Jaiho-Digital/61577036115802/"
-                            class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            class="social-icon facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.youtube.com/@jaihodigital" class="social-icon youtube"
-                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                         <a href="https://www.linkedin.com/company/jaihoailabs" class="social-icon linkedin"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+
                 <div class="footer-links">
                     <div class="f-col">
                         <h4>Ecosystem</h4>
@@ -278,21 +285,24 @@
                             Jaiho Kernel</a>
                         <a href="https://jaihotechserve.onrender.com" target="_blank"><i class="fas fa-code"></i> Jaiho
                             TechServe</a>
-                        <a href="org_sub_pages/page_edge.html" target="_blank"><i class="fas fa-microchip"></i> Jaiho
+                        <a href="https://jaihoedge.onrender.com/" target="_blank"><i class="fas fa-microchip"></i> Jaiho
                             Edge</a>
                         <a href="org_sub_pages/jaiho_reach.html" target="_blank"><i class="fas fa-bullhorn"></i> Jaiho
                             Reach</a>
                     </div>
+
                     <div class="f-col">
                         <h4>Resources</h4>
                         <a href="hub.html"><i class="fas fa-th"></i> Product Hub</a>
-                        <a href="research.html"><i class="fas fa-flask"></i> Research</a>
-                        <a href="vision.html"><i class="fas fa-eye"></i> Vision</a>
-                        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                        <a href="#"><i class="fas fa-book"></i> Docs</a>
+                        <a href="https://itsarc.w3spaces.com/itsarc2.html?fname=&lname=" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> Learning</a>
+                        <a href="#"><i class="fas fa-file-lines"></i> Whitepapers</a>
                     </div>
+
                     <div class="f-col">
                         <h4>Company</h4>
                         <a href="about.html"><i class="fas fa-building"></i> About Us</a>
+                        <a href="research.html"><i class="fas fa-flask"></i> Research</a>
                         <a href="https://github.com/jaihodigital" target="_blank"><i class="fab fa-github"></i> Open
                             Source</a>
                         <a href="mailto:jaihodigital@gmail.com"><i class="fas fa-envelope"></i> Contact</a>
@@ -305,6 +315,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Bottom Footer Section -->
             <div class="footer-bottom">
                 <div class="footer-bottom-left">
                     <p>&copy; 2026 Jaiho Digital. All Rights Reserved.</p>
