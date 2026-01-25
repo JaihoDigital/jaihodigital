@@ -438,6 +438,39 @@
   ],
   "resources": [
     {
+      "id": "visio-ai-docs",
+      "name": "Visio AI Documentation",
+      "category": "docs",
+      "status": "Public",
+      "developedBy": "Jaiho Labs",
+      "description": "Visio AI, no-code dashboard for automated data cleaning, ML model training, and instant visualization.",
+      "features": ["Machine Learning", "Data Visualization", "Data Handling", "Auto ML"],
+      "link": "https://jaiho-labs.onrender.com/pages/products_resources/docs/visio_ai_docs/visio_docs.html",
+      "icon": "fa-book"
+    },
+    {
+      "id": "kernel-pulse-docs",
+      "name": "Kernel Pulse Documentation",
+      "category": "docs",
+      "status": "Public",
+      "developedBy": "Jaiho Kernel",
+      "description": "Comprehensive guide to setting up and using Kernel Pulse for real-time infrastructure monitoring.",
+      "features": ["Setup Guide", "API Reference", "Configuration", "Best Practices"],
+      "link": "https://kernel-pulse.vercel.app/docs.html",
+      "icon": "fa-book"
+    },
+    {
+      "id": "jaiho-ip-docs",
+      "name": "Jaiho IP API Documentation",
+      "category": "docs",
+      "status": "Public",
+      "developedBy": "Jaiho Kernel",
+      "description": "User manual and API reference for Jaiho IP geolocation service.",
+      "features": ["User Guide", "API Reference", "CORS Usage", "Examples"],
+      "link": "https://jaiho-ip.vercel.app/api_docs.html",
+      "icon": "fa-book"
+    },
+    {
       "id": "docs-all",
       "name": "Global Documentation",
       "category": "docs",
@@ -468,6 +501,17 @@
       "description": "Detailed installation and usage guide for the Dev Link desktop suite.",
       "features": ["Installation", "Shortcuts", "Troubleshooting"],
       "link": "#",
+      "icon": "fa-file-lines"
+    },
+    {
+      "id": "visio-ai-manual",
+      "name": "VISIO AI Guide",
+      "category": "manual",
+      "status": "Published",
+      "developedBy": "Jaiho Labs",
+      "description": "Detail Guide of Visio AI that how to use.",
+      "features": ["Visio AI", "Machine Learning", "Visualizations"],
+      "link": "https://jaiho-labs.onrender.com/pages/products_resources/docs/visio_ai_docs/visio_helper.html",
       "icon": "fa-file-lines"
     },
     {
