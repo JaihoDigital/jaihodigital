@@ -59,15 +59,15 @@
     {
       "id": "radiant-ai",
       "name": "Radiant AI",
-      "tagline": "Advanced AI Image Processing",
+      "tagline": "Advanced AI Image Correction Software",
       "category": "ai",
       "status": "Live",
       "version": "v1.2",
       "developedBy": "Jaiho Labs",
       "techStack": ["OpenCV", "TensorFlow.js", "GFPGAN"],
       "description": "Transform images with next-gen tools. Enhance, detect objects, restore degraded photos, and colorize black-and-white images directly in the browser.",
-      "features": ["Image Upscaling", "Object Detection (YOLO)", "Old Photo Restoration", "Style Transfer"],
-      "link": "https://huggingface.co/spaces/jaihodigital/radiant_ai",
+      "features": ["Auto Correction", "Noise Reduction", "Red Eye Removal", "Image Upscaling", "Object Detection (YOLO)", "Old Photo Restoration", "Style Transfer"],
+      "link": "https://radiantai.vercel.app/",
       "icon": "fa-image"
     },
     {
