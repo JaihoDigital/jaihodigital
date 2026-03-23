@@ -12,6 +12,21 @@
   ],
   "products": [
     {
+      "id": "turing-aios",
+      "name": "Turing AI OS",
+      "tagline": "AI OS built on top of KDE Neon Linux",
+      "category": "ai",
+      "status": "Beta",
+      "version": "v1.4",
+      "developedBy": "Jaiho Labs",
+      "techStack": ["Linux", "OS", "AI", "LLMs", "Autonomous"],
+      "description": "The next generation AI operating system that thinks, Those who want private, ad-free, local intelligence OS without relying on cloud APIs.",
+      "features": ["AI", "Agentic AI OS", "AI Sidebar", "Right Click Context", "KDE Plasma", "Mini AI Spotlight"],
+      "link": "https://turing-aios.vercel.app",
+      "icon": "fa-desktop",
+      "bannerGradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+    },
+    {
       "id": "visio-ai",
       "name": "Visio AI",
       "tagline": "No-Code Data Science Workbench",
@@ -31,13 +46,13 @@
       "name": "NGIBS",
       "tagline": "Next-Gen Intelligent Browsing",
       "category": "ai",
-      "status": "Beta",
+      "status": "Live",
       "version": "v0.9",
       "developedBy": "Jaiho Labs",
       "techStack": ["Hugging Face", "LLM", "Search API"],
       "description": "Reinventing search by combining real-time web indexing with Large Language Model reasoning. Provides citations in a clean, ad-free interface.",
       "features": ["Deep Search Mode", "Live Web Access", "Citation Generation", "Memory Chat"],
-      "link": "https://huggingface.co/spaces/jaihodigital/ngibs-ai-search",
+      "link": "https://ngibs.vercel.app/",
       "icon": "fa-magnifying-glass-chart",
       "bannerGradient": "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)"
     },
@@ -71,20 +86,6 @@
       "icon": "fa-image"
     },
     {
-      "id": "spa-ai",
-      "name": "SPA AI",
-      "tagline": "Smart Process Automation",
-      "category": "ai",
-      "status": "In Development",
-      "version": "Alpha",
-      "developedBy": "Jaiho Labs",
-      "techStack": ["Python", "RPA", "LLM"],
-      "description": "Automates complex business processes using artificial intelligence to reduce manual work and improve operational efficiency.",
-      "features": ["Process Mining", "Workflow Automation", "RPA Integration", "Rule Engine"],
-      "link": "#",
-      "icon": "fa-robot"
-    },
-    {
       "id": "nlp-lab",
       "name": "NLP Intelligent Lab",
       "tagline": "Interactive NLP Playground",
@@ -97,6 +98,34 @@
       "features": ["Transformer Visuals", "Sentiment Analysis", "Text Classification", "Translation"],
       "link": "https://huggingface.co/spaces/jaihodigital/nlp-intelligent-lab",
       "icon": "fa-language"
+    },
+    {
+      "id": "sentiment-model",
+      "name": "Sentiment Model",
+      "tagline": "Emotion Analysis Engine",
+      "category": "ai",
+      "status": "Live",
+      "version": "v1.0",
+      "developedBy": "Jaiho Labs",
+      "techStack": ["Logistic Regression", "TF-IDF"],
+      "description": "Pre-trained model capable of classifying text as Positive, Negative, Neutral, or Irrelevant with ~90% accuracy.",
+      "features": ["Multi-class Classification", "Fast Inference", "Custom Preprocessing", "Python API"],
+      "link": "https://huggingface.co/jaiholabs/sentiment-analysis-lr",
+      "icon": "fa-face-smile"
+    },
+    {
+      "id": "spa-ai",
+      "name": "SPA AI",
+      "tagline": "Smart Process Automation",
+      "category": "ai",
+      "status": "In Development",
+      "version": "Alpha",
+      "developedBy": "Jaiho Labs",
+      "techStack": ["Python", "RPA", "LLM"],
+      "description": "Automates complex business processes using artificial intelligence to reduce manual work and improve operational efficiency.",
+      "features": ["Process Mining", "Workflow Automation", "RPA Integration", "Rule Engine"],
+      "link": "#",
+      "icon": "fa-robot"
     },
     {
       "id": "cv-lab",
@@ -139,20 +168,6 @@
       "features": ["CNN/RNN Design", "GANs & VAEs", "Sequence Modeling", "Time Series Analysis"],
       "link": "#",
       "icon": "fa-project-diagram"
-    },
-    {
-      "id": "sentiment-model",
-      "name": "Sentiment Model",
-      "tagline": "Emotion Analysis Engine",
-      "category": "ai",
-      "status": "Live",
-      "version": "v1.0",
-      "developedBy": "Jaiho Labs",
-      "techStack": ["Logistic Regression", "TF-IDF"],
-      "description": "Pre-trained model capable of classifying text as Positive, Negative, Neutral, or Irrelevant with ~90% accuracy.",
-      "features": ["Multi-class Classification", "Fast Inference", "Custom Preprocessing", "Python API"],
-      "link": "https://huggingface.co/jaiholabs/sentiment-analysis-lr",
-      "icon": "fa-face-smile"
     },
     {
       "id": "hawkin-ai",
