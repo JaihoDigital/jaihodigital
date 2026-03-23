@@ -241,18 +241,18 @@
       "icon": "fa-server"
     },
     {
-      "id": "kernel-vault",
-      "name": "Kernel Vault",
-      "tagline": "Secure Data Storage",
+      "id": "jaiho-labsync",
+      "name": "Jaiho Lab Sync",
+      "tagline": "Automated Batch Images/Album to PDF",
       "category": "software",
-      "status": "Planned",
-      "version": "Concept",
-      "developedBy": "Jaiho Kernel",
-      "techStack": ["Encryption", "P2P"],
-      "description": "Advanced encrypted storage solution for sensitive data with zero-knowledge architecture.",
-      "features": ["AES-256 Encryption", "Zero-Knowledge", "Secure Sharing", "Local First"],
-      "link": "#",
-      "icon": "fa-vault"
+      "status": "Live",
+      "version": "v26.3",
+      "developedBy": "Jaiho Labs",
+      "techStack": ["C++", "QT6", "Libharu"],
+      "description": "Batch convert corrected images to print-ready PDFs with automatic layout optimization. Pre-configured templates for passports, albums, and lab specifications. Custom template support included.",
+      "features": ["Automated Image → PDF", "Template System", "Lossless Quality", "libharu Industry Standard"],
+      "link": "https://radiantai.vercel.app/",
+      "icon": "fa-file-lines"
     },
     {
       "id": "dev-link",
@@ -337,6 +337,20 @@
       "features": ["Member Database", "Attendance Tracking", "Billing Cycles", "Workout Plans"],
       "link": "#",
       "icon": "fa-dumbbell"
+    },
+    {
+      "id": "kernel-vault",
+      "name": "Kernel Vault",
+      "tagline": "Secure Data Storage",
+      "category": "software",
+      "status": "Planned",
+      "version": "Concept",
+      "developedBy": "Jaiho Kernel",
+      "techStack": ["Encryption", "P2P"],
+      "description": "Advanced encrypted storage solution for sensitive data with zero-knowledge architecture.",
+      "features": ["AES-256 Encryption", "Zero-Knowledge", "Secure Sharing", "Local First"],
+      "link": "#",
+      "icon": "fa-vault"
     },
     {
       "id": "mini-color",
