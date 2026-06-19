@@ -12,6 +12,21 @@
   ],
   "products": [
     {
+      "id": "crab-ai-llm",
+      "name": "CRAB AI SLM",
+      "tagline": "CRAB AI - Tiny Language Model",
+      "category": "ai",
+      "status": "Live",
+      "version": "v_4.1",
+      "developedBy": "Jaiho Labs",
+      "techStack": ["LLMs", "AI", "SLMs", "90M-param"],
+      "description": "Built on a 90M-parameter architecture, CRAB AI delivers impressive performance in a compact model. Ideal for edge devices and applications where efficiency is key.",
+      "features": ["AI", "SLMs", "90M-param", "Edge Deployment", "Low Latency"],
+      "link": "https://github.com/JaihoDigital/crab_language_model",
+      "icon": "fa-robot",
+      "bannerGradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+    },
+    {
       "id": "turing-aios",
       "name": "Turing AI OS",
       "tagline": "AI OS built on top of KDE Neon Linux",
